@@ -45,7 +45,7 @@ FermionFields[[13]] = {lpp, 1,conj[{-epp,vpp}],   1/2, 2,  1,   6,  1};
 ScalarFields[[1]] = {H, 1, {H0, Hm},           -1/2, 2,  1,    0,  1};
 ScalarFields[[2]] = {bi,   1, BiD,                0, 1,  1,    5,  1};
 ScalarFields[[3]] = {S,   1, ss,                   1, 1,  1,    1, 1};
-ScalarFields[[4]] = {Sc,   1, sc,                  1, 1,  1,    6, 1};
+ScalarFields[[4]] = {Sc,  1, sc,                  -1, 1,  1,    4, 1};
 
 
 (*----------------------------------------------*)
@@ -69,7 +69,8 @@ LagNoHC = -(mu2 conj[H].H - L1 conj[H].H.conj[H].H + MuP conj[bi].bi - L2 conj[b
 + MPc2 conj[Sc].Sc - L23 conj[Sc].Sc.conj[Sc].Sc - L33 conj[Sc].Sc.conj[H].H 
 );
 
-Lagint = -( YRA x3.x4.conj[bi] + YRB x5.x6.bi + YRC lp.lpp.conj[bi] + YRD l.lp.S + YRE conj[x5].Sc.v + YRF S.conj[Sc].bi + YRG H.x5.lp );
+Lagint = -( YRA x3.x4.conj[bi] + YRB x5.x6.bi + YRC lp.lpp.conj[bi] + YRD l.lp.S + YRE x5.Sc.v 
++ YRF S.Sc.conj[bi] + YRG H.x5.lp (*+ YRH S.*) );
 
 (* Gauge Sector *)
 
@@ -96,7 +97,7 @@ DEFINITION[EWSB][MatterSector]=
      {{{eL}, {conj[eR]}}, {{EL,Ve}, {ER,Ue}}},
      
      {{{vL}, {conj[vvR],conj[vR3]}}, {{VL, Vv}, {VR, Vvr}}},
-     {{ss,sc}, {Ssc, VSs}}
+     {{ss,conj[sc]}, {Ssc, VSs}}
 
 };  
 

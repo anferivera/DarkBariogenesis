@@ -14,21 +14,21 @@ Block MINPAR      # Input parameters
  1   -1.2700000E-01    # Lambda1INPUT
  2   -7.2000000E-02    # Lambda2INPUT
  3   1.2000000E-03    # Lambda3INPUT
- 4   1.0000000E-01    # YRAINPUT
- 5   2.0000000E-01    # YRBINPUT
+ 4   1.5000000E-01    # YRAINPUT
+ 5   2.2000000E-01    # YRBINPUT
  6   3.0000000E-01    # YRCINPUT
  7   1.0000000E-03    # YRFINPUT
  8   2.0000000E-02    # YRGINPUT
  9   2.5000000E+03    # vXInput
  10   5.0000000E-01    # g1pINPUT
- 11   1.000000E-04    # g1p1INPUT
- 12   1.000000E-05    # g11pINPUT
+ 11   1.1000000E-04    # g1p1INPUT
+ 12   0.0000000E-05    # g11pINPUT
  13   3.0000000E-03    # Lambda22INPUT
  14   4.0000000E-03    # Lambda32INPUT
  15   2.0000000E+06    # MP2INPUT
- 16   4.0000000E-03    # Lambda23INPUT
- 17   5.0000000E-03    # Lambda33INPUT
- 18   3.0000000E+08    # MPc2INPUT
+ 16   4.1000000E-03    # Lambda23INPUT
+ 17   5.1000000E-03    # Lambda33INPUT
+ 18   3.1000000E+08    # MPc2INPUT
 Block SPhenoInput   # SPheno specific input 
   1 -1              # error level 
   2  0              # SPA conventions 
@@ -83,8 +83,8 @@ Block DECAYOPTIONS   # Options to turn on/off specific decays
 4    1     # Calc 3-Body decays of Fd 
 Block YRDIN    #  
  1   1.000000E-02         # YRD(1)
- 2   2.000000E-02         # YRD(2)
- 3   3.000000E-02         # YRD(3)
+ 2   2.000000E-03         # YRD(2)
+ 3   3.000000E-04         # YRD(3)
 Block YREIN    #  
- 1   1.000000E-02         # YRE(1)
- 2   2.000000E-02         # YRE(2)
+ 1   2.000000E-02         # YRE(1)
+ 2   3.000000E-03         # YRE(2)
