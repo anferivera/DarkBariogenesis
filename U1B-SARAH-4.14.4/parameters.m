@@ -125,34 +125,35 @@ ParameterDefinitions = {
 
 (* new *)
 
-{Vv, {Description ->"Neutrino-Mixing-Matrix"}},
+(*{Vv, {Description ->"Neutrino-Mixing-Matrix"}},*)
 
-{Vvr, {Description ->"right-Neutrino-Mixing-Matrix",
+(*{Vvr, {Description ->"New-Neutrino-Mixing-Matrix",
              LaTeX -> "U^{UR}",
              Dependence ->  None, 
              Value -> None, 
              LesHouches -> UVRMIX,
-             OutputName-> UVR }},
+             OutputName-> UVR }},*)
+
+{ZM,	    {Description -> "Neutrino-Mixing-Matrix"}},
 
 
 {ZH,        { Description->"Scalar-Mixing-Matrix", 
                Dependence -> None,
                DependenceOptional -> None,
                DependenceNum -> None   }},
+  
 {ZA,        { Description->"Pseudo-Scalar-Mixing-Matrix", 
-                Dependence -> None,
+               Dependence -> None,
                DependenceOptional -> None,
                DependenceNum -> None   }},
 
-(*{YRB,       { LaTeX -> "h_b",   
-              Real -> True, 
-              LesHouches -> YRB,
-              OutputName-> YRB }},
-
-{YRC,       { LaTeX -> "h_c",   
-              Real -> True, 
-              LesHouches -> YRC,
-              OutputName-> YRC }}, *)
+{ZP,        { Description->"Charged-Mixing-Matrix", 
+		LaTeX -> "Z^+",
+		Real ->True,
+		DependenceOptional -> None, 
+		Value -> None, 
+		LesHouches -> CHARGEMIX,
+		OutputName-> ZP      }},
 
 
 {VSs,       {   (* Rotation matrix *)
@@ -244,6 +245,12 @@ ParameterDefinitions = {
               Real -> True, 
               LesHouches -> YRG,
               OutputName-> YRG }},   
+              
+ {YRH,       { LaTeX -> "h_h",   
+              Real -> True, 
+              LesHouches -> YRH,
+              OutputName-> YRH }},   
+              
     
  {VSs,       {   (* Rotation matrix *)
                 LaTeX -> "VS",

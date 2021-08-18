@@ -62,67 +62,36 @@ ParticleDefinitions[GaugeES] = {
                  OutputName -> "Ah" }},                      
       
       
-     {Hm,     {   Description -> "Charged Higgs", 
-                 PDG -> {0},
-                 Width -> 0, 
-                 Mass ->LesHouches,
-                 FeynArtsNr -> 3,
-                 LaTeX -> "H^-",
-                 OutputName -> "Hm" }},
-                 
-   (* {ss,     {  (*Description -> "",*)
-               PDG -> {6666635},
-               PDG.IX -> {101000002},
-               FeynArtsNr -> 10,
-               Width -> Automatic,
-               Mass -> Automatic,               
-               LaTeX -> "\\sigma_1",
-               ElectricCharge -> 1,
-               (*LHPC -> {"gold"},*)
-               OutputName -> "sigma1" }},     
-               
-    {sc,     {  (*Description -> "",*)
-               PDG -> {6666636},
-               PDG.IX -> {101000003},
-               FeynArtsNr -> 11,
-               Width -> Automatic,
-               Mass -> Automatic,               
-               LaTeX -> "\\sigma_2",
-               ElectricCharge -> 1,
-               (*LHPC -> {"gold"},*)
-               OutputName -> "sigma2" }}, *)
-   
-    {Ssc,   {  Description -> "Singlet",
-               PDG -> {635,636},
-               PDG.IX -> {-1010000003,-1010000004},
-               Mass -> LesHouches,
-               Width -> Automatic,
-               FeynArtsNr -> 4,
-               LaTeX -> "\\sigma",
-               ElectricCharge -> 1,
-               (*LHPC -> {"gold"},*)
-               OutputName -> "Sigmas" }}, 
+    {Hm,   { Description -> "Charged Higgs", 
+	     PDG -> {0, 900037, 900038},
+	     PDG.IX -> {0, -10000602,  -10000603},
+	     Width -> {0, External, External},
+	     Mass -> {0, LesHouches, LesHouches},
+	     ElectricCharge -> -1,
+	     Latex -> {"Hm^-","S^-_1","S^-_2"},
+	     OutputName -> {"Hm","s1","s2"}}},
       
-      {VP,   { Description -> "Photon"}}, 
-      {VZ,   { Description -> "Z-Boson",
-      			 Goldstone -> Ah[{1}] }}, 
-      {VG,   { Description -> "Gluon" }},          
-      {VWm,  { Description -> "W-Boson",
-                Goldstone->Hm }},         
-      {gP,   { Description -> "Photon Ghost"}},                                                   
-      {gWm,  { Description -> "Negative W-Boson Ghost"}}, 
-      {gWmC, { Description -> "Positive W-Boson Ghost" }}, 
-      {gZ,   { Description -> "Z-Boson Ghost" }},
-      {gG,   { Description -> "Gluon Ghost" }},          
-      {VZp,    { Description -> "Z'-Boson",
+    {VP,   { Description -> "Photon"}}, 
+    {VZ,   { Description -> "Z-Boson",
+    			 Goldstone -> Ah[{1}] }}, 
+    {VG,   { Description -> "Gluon" }},          
+    {VWm,  { Description -> "W-Boson",
+	                 Goldstone-> Hm[{1}] }},         
+    {gP,   { Description -> "Photon Ghost"}},                                                   
+    {gWm,  { Description -> "Negative W-Boson Ghost"}}, 
+    {gWmC, { Description -> "Positive W-Boson Ghost" }}, 
+    {gZ,   { Description -> "Z-Boson Ghost" }},
+    {gG,   { Description -> "Gluon Ghost" }},          
+    {VZp,  { Description -> "Z'-Boson",
       			 Goldstone -> Ah[{2}]}},  
-      {gZp,    { Description -> "Z'-Ghost" }},    
-                                                
-      {Fd,   { Description -> "Down-Quarks"}},   
-      {Fu,   { Description -> "Up-Quarks"}},   
-      {Fe,   { Description -> "Leptons" }},
-      {Fv,   { Description -> "Neutrinos",
-      			PDG ->{12,14,16} }},
+    {gZp,  { Description -> "Z'-Ghost" }},    
+                               
+                 
+    {Fd,   { Description -> "Down-Quarks"}},   
+    {Fu,   { Description -> "Up-Quarks"}},   
+    {Fe,   { Description -> "Leptons" }},
+    {Fv,   { Description -> "Neutrinos",
+		   PDG ->{12,14,16,8810012,8810014,8810016} }},               
                 
       {Fx,  {  PDG -> {210001},
                 PDG.IX ->{-2110001},
@@ -137,10 +106,10 @@ ParticleDefinitions[GaugeES] = {
                 PDG.IX ->{-2110002},
                 Mass -> Automatic,
                 Width -> Automatic,
-                LaTeX -> "e2",
+                LaTeX -> "eR^{p}",
                 ElectricCharge -> -1,
                 FeynArtsNr -> 7,
-                OutputName -> "E2s" }},
+                OutputName -> "eRp" }},
                                        
      {Fvv,  {  PDG -> {210003},
                 PDG.IX ->{-2110003},
@@ -155,10 +124,10 @@ ParticleDefinitions[GaugeES] = {
                 PDG.IX ->{-2110004},
                 Mass -> Automatic,
                 Width -> Automatic,
-                LaTeX -> "e3",
+                LaTeX -> "eR^{pp}",
                 ElectricCharge -> -1,
                 FeynArtsNr -> 9,
-                OutputName -> "E3s" }}       
+                OutputName -> "eRpp" }}       
      
         };    
           

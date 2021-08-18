@@ -10,19 +10,20 @@ MINPAR={{1, Lambda1INPUT},
         {6, YRCINPUT},
         {7, YRFINPUT},
         {8, YRGINPUT},
-        {9, vXInput},
+        {9, YRHINPUT},
+        {10, vXInput},
         
-        {10, g1pINPUT},
-        {11, g1p1INPUT},
-        {12, g11pINPUT},
+        {11, g1pINPUT},
+        {12, g1p1INPUT},
+        {13, g11pINPUT},
         
-        {13, Lambda22INPUT},
-        {14, Lambda32INPUT},
-        {15, MP2INPUT},
+        {14, Lambda22INPUT},
+        {15, Lambda32INPUT},
+        {16, MP2INPUT},
         
-        {16, Lambda23INPUT},
-        {17, Lambda33INPUT},
-        {18, MPc2INPUT}                
+        {17, Lambda23INPUT},
+        {18, Lambda33INPUT},
+        {19, MPc2INPUT}                
 
 };
 
@@ -53,6 +54,7 @@ BoundaryLowScaleInput={
  {YRC, YRCINPUT},
  {YRF, YRFINPUT},
  {YRG, YRGINPUT},
+ {YRH, YRHINPUT},
  
  {vX, vXInput},
  
@@ -70,10 +72,10 @@ BoundaryLowScaleInput={
 
 AddTreeLevelUnitarityLimits=True;
 
-ListDecayParticles = {Fu,Fe,Fd,Fv,hh,VZp,Fx,Fes,Fvv,Fed,Ssc};
+ListDecayParticles = {Fu,Fe,Fd,Fv,hh,VZp,Hm,Fx,Fes,Fvv,Fed};
 ListDecayParticles3B = {{Fv,"Fv.f90"},{Fu,"Fu.f90"},{Fe,"Fe.f90"},{Fd,"Fd.f90"}};
 
 
-DefaultInputValues ={ Lambda1INPUT -> -0.127, Lambda2INPUT -> -7.2*10^-2,  Lambda3INPUT -> 1.2*10^-3,  g1pINPUT->0.5, vXInput->2500, YRAINPUT -> 0.1, YRBINPUT -> 0.2, YRCINPUT -> 0.3, YRD[1,1] -> 0.005,  Lambda22INPUT -> 0.003, Lambda32INPUT -> 0.004, MP2INPUT -> 2000000., MPc2INPUT -> 3.0*10^8, Lambda23INPUT -> 0.004, Lambda33INPUT -> 0.005, YRGINPUT -> 0.02, YREIN[1,1] -> 0.0021, YRFINPUT -> 0.001, g11pINPUT -> 0.00001, g1p1INPUT -> 0.0001 };
+DefaultInputValues ={ Lambda1INPUT -> -0.127, Lambda2INPUT -> -7.2*10^-2,  Lambda3INPUT -> 1.2*10^-3,  g1pINPUT->0.5, vXInput->2500, YRAINPUT -> 0.1, YRBINPUT -> 0.2, YRCINPUT -> 0.3, YRD[1,1] -> 0.005,  Lambda22INPUT -> 0.003, Lambda32INPUT -> 0.004, MP2INPUT -> 2000000., MPc2INPUT -> 3.0*10^8, Lambda23INPUT -> 0.004, Lambda33INPUT -> 0.005, YRGINPUT -> 0.02, YRHINPUT -> 0.012, YREIN[1,1] -> 0.0021, YRFINPUT -> 0.001, g11pINPUT -> 0.00001, g1p1INPUT -> 0.0001 };
 
 

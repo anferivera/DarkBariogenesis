@@ -8,6 +8,7 @@ Model`Date = "2021-07-21";
 (* 2014-11-06: Changed sign in Lagrangian *)
 (* 2020-22-07 Introduccing new scalar bi2 for Bariogenesis *)
 (* 2021-21-07 Introducing the U(1)B*)
+(*2021-18-08  changin H hypercharge*)
 
 (*-------------------------------------------*)
 (*   Particle Content*)
@@ -42,7 +43,7 @@ FermionFields[[11]] = {x6, 1, x6L,                -1, 1,  1,  -6,  1};
 FermionFields[[12]] = {lp, 1, {vp, ep},        -1/2, 2,  1,   -1,  1};
 FermionFields[[13]] = {lpp, 1,conj[{-epp,vpp}],   1/2, 2,  1,   6,  1};
 
-ScalarFields[[1]] = {H, 1, {H0, Hm},           -1/2, 2,  1,    0,  1};
+ScalarFields[[1]] = {H,  1, {Hp, H0},   1/2, 2,  1,  0, 1};
 ScalarFields[[2]] = {bi,   1, BiD,                0, 1,  1,    5,  1};
 ScalarFields[[3]] = {S,   1, ss,                   1, 1,  1,    1, 1};
 ScalarFields[[4]] = {Sc,  1, sc,                  -1, 1,  1,    4, 1};
@@ -62,7 +63,7 @@ DEFINITION[GaugeES][Additional]= {
      {Lagint , {AddHC->True}}
 };
 
-LagHC = - (+ Yd H.d.q + Ye H.e.l - Yu conj[H].u.q );
+LagHC = - (+ Yd conj[H].d.q + Ye conj[H].e.l + Yu H.u.q  );
 
 LagNoHC = -(mu2 conj[H].H - L1 conj[H].H.conj[H].H + MuP conj[bi].bi - L2 conj[bi].bi.conj[bi].bi - L3 conj[bi].bi.conj[H].H 
 + MP2 conj[S].S - L22 conj[S].S.conj[S].S - L32 conj[S].S.conj[H].H 
@@ -70,7 +71,7 @@ LagNoHC = -(mu2 conj[H].H - L1 conj[H].H.conj[H].H + MuP conj[bi].bi - L2 conj[b
 );
 
 Lagint = -( YRA x3.x4.conj[bi] + YRB x5.x6.bi + YRC lp.lpp.conj[bi] + YRD l.lp.S + YRE x5.Sc.v 
-+ YRF S.Sc.conj[bi] + YRG H.x5.lp (*+ YRH S.*) );
++ YRF S.Sc.conj[bi] + YRG conj[H].x5.lp + YRH H.x6.lpp );
 
 (* Gauge Sector *)
 
@@ -92,13 +93,12 @@ DEFINITION[EWSB][MatterSector]=
     {
      {{phiH,phiB},{hh,ZH}},
      {{sigmaH,sigmaB},{Ah,ZA}},
+     {{conj[Hp],conj[ss],sc},{Hm,ZP}},
      {{{dL}, {conj[dR]}}, {{DL,Vd}, {DR,Ud}}},
      {{{uL}, {conj[uR]}}, {{UL,Vu}, {UR,Uu}}},
      {{{eL}, {conj[eR]}}, {{EL,Ve}, {ER,Ue}}},
-     
-     {{{vL}, {conj[vvR],conj[vR3]}}, {{VL, Vv}, {VR, Vvr}}},
-     {{ss,conj[sc]}, {Ssc, VSs}}
-
+   
+     {{vL, conj[vvR], conj[vR3]}, {VL, ZM}}
 };  
 
 (*------------------------------------------------------*)
@@ -109,7 +109,8 @@ DEFINITION[EWSB][DiracSpinors]={
  Fd ->{  DL, conj[DR]},
  Fe ->{  EL, conj[ER]},
  Fu ->{  UL, conj[UR]},
- Fv ->{  VL, conj[VR]},
+ (*Fv ->{  VL, conj[VR]},*)
+ Fv ->{  VL, conj[VL]},
  Fx ->{  x3L,x4R}, 
  Fes ->{  x6L, x5R},
  Fvv ->{  vp, vpp}, 
