@@ -3,7 +3,7 @@ Off[General::spell]
 Model`Name = "U1B";
 Model`NameLaTeX =" U(1)B extension for Bariogenesis";
 Model`Authors = "Andres Rivera. Base in SM by F.Staub";
-Model`Date = "2021-08-27";
+Model`Date = "2021-08-30";
 
 (* 2014-11-06: Changed sign in Lagrangian *)
 (* 2020-22-07 Introduccing new scalar bi2 for Bariogenesis *)
@@ -44,8 +44,8 @@ FermionFields[[12]] = {lpp, 1,conj[{-epp,vpp}],  1/2, 2,  1,    6,  1};
 
 ScalarFields[[1]] = {H,  1, {Hp, H0},           1/2, 2,  1,  0, 1};
 ScalarFields[[2]] = {bi,  1, BiD,                 0, 1,  1,  5, 1};
-ScalarFields[[3]] = {S,   1, ss,                  1, 1,  1,  1, 1};
-ScalarFields[[4]] = {Sc,  1, sc,                 -1, 1,  1,  4, 1};
+ScalarFields[[3]] = {S1,  1, s1,                 -1, 1,  1, -1, 1};
+ScalarFields[[4]] = {S2,  1, s2,                 -1, 1,  1,  4, 1};
 
 
 (*----------------------------------------------*)
@@ -59,18 +59,19 @@ NameOfStates={GaugeES, EWSB};
 DEFINITION[GaugeES][Additional]= {
      {LagHC, {AddHC->True}},
      {LagNoHC,{ AddHC->False}},
+	{LagS1,{ AddHC->False}},	
+	{LagS2,{ AddHC->False}},
      {Lagint , {AddHC->True}}
 };
 
 LagHC = - (+ Yd conj[H].d.q + Ye conj[H].e.l + Yu H.u.q);
 
-LagNoHC = -(mu2 conj[H].H - L1 conj[H].H.conj[H].H + MuP conj[bi].bi - L2 conj[bi].bi.conj[bi].bi - L3 conj[bi].bi.conj[H].H 
-+ MP2 conj[S].S - L22 conj[S].S.conj[S].S - L32 conj[S].S.conj[H].H 
-+ MPc2 conj[Sc].Sc - L23 conj[Sc].Sc.conj[Sc].Sc - L33 conj[Sc].Sc.conj[H].H 
-);
+LagNoHC = -(muh conj[H].H - Lh conj[H].H.conj[H].H + MuP conj[bi].bi - L2 conj[bi].bi.conj[bi].bi - L3 conj[bi].bi.conj[H].H );
 
-Lagint = -( YRA x3.x4.conj[bi] + YRB x5.x6.bi + YRC lp.lpp.conj[bi] + YRD l.lp.S + YRE x5.Sc.v 
-+ YRF S.Sc.conj[bi] + YRG conj[H].x5.lp + YRH H.x6.lpp );
+LagS1 = -(mu1 conj[S1].S1  + L22 conj[S1].S1.conj[S1].S1 + L32 conj[S1].S1.conj[H].H );
+LagS2 = -(mu2 conj[S2].S2 + L23 conj[S2].S2.conj[S2].S2 + L33 conj[S2].S2.conj[H].H );
+
+Lagint = -( YRA conj[bi].x3.x4 + YRB bi.x5.x6 + YRC conj[bi].lp.lpp + YRD conj[S1].l.lp + YRE S2.x5.v + YRF conj[S1].S2.conj[bi] + YRG conj[H].x5.lp + YRH H.x6.lpp );
 
 (* Gauge Sector *)
 
@@ -87,13 +88,11 @@ DEFINITION[EWSB][VEVs]=
 {    {H0, {vH, 1/Sqrt[2]}, {sigmaH, \[ImaginaryI]/Sqrt[2]},{phiH, 1/Sqrt[2]}},
      {BiD,{vX, 1/Sqrt[2]}, {sigmaB, \[ImaginaryI]/Sqrt[2]},{phiB, 1/Sqrt[2]}}   };
  
-
 DEFINITION[EWSB][MatterSector]=   
     {
      {{phiH,phiB},{hh,ZH}},
      {{sigmaH,sigmaB},{Ah,ZA}},
-     {{conj[Hp],conj[ss],sc},{Hm,ZP}},
-     (*{{ss,conj[sc]}, {Ssc, VSs}},*)
+     {{conj[Hp],s1,s2},{Hm,ZP}},
 
      {{{dL}, {conj[dR]}}, {{DL,Vd}, {DR,Ud}}},
      {{{uL}, {conj[uR]}}, {{UL,Vu}, {UR,Uu}}},

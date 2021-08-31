@@ -56,17 +56,7 @@ ParticleDefinitions[GaugeES] = {
 	     ElectricCharge -> -1,
 	     Latex -> {"Hm^-","S^-_1","S^-_2"},
 	     OutputName -> {"Hm","s1","s2"}}},  
-                 
-   (* {Ssc,   {  Description -> "Singlet",
-               PDG -> {635,636},
-               PDG.IX -> {-1010000003,-1010000004},
-               Mass -> LesHouches,
-               Width -> Automatic,
-               FeynArtsNr -> 4,
-               LaTeX -> "\\sigma",
-               ElectricCharge -> 1,
-               (*LHPC -> {"gold"},*)
-               OutputName -> "Sigmas" }},   *)              
+                             
       
     {VP,   { Description -> "Photon"}}, 
     {VZ,   { Description -> "Z-Boson",
@@ -88,19 +78,8 @@ ParticleDefinitions[GaugeES] = {
     {Fu,   { Description -> "Up-Quarks"}},   
     {Fe,   { Description -> "Leptons" }},
     {Fv,   { Description -> "Neutrinos",
-		   PDG ->{12,14,16,8810012,8810014} }},   
-           
-    (*{Fv,   { Description -> "Neutrinos",
-                   PDG ->{12,14,16,8810012,8810014},
-                    PDG.IX ->{-110000001,-110000002,-110000003,-110000004,-110000005},
-                 Width -> {0,0,0,0,0}, 
-                 Mass -> {0,0,0,0,0},
-                 FeynArtsNr -> 1,
-                 ElectricCharge -> 0,
-                 LaTeX -> "\\nu",
-                 OutputName -> "nu"  }},   *)        
-           
-    (*New fermions*)       
+		   PDG ->{12,14,16,8810012,8810014} }},          
+                 
                 
     {Fx,  {  PDG -> {210001},
                 PDG.IX ->{-2110001},
@@ -148,17 +127,17 @@ ParticleDefinitions[GaugeES] = {
                  Mass -> Automatic,
                  LaTeX -> "H",
                  OutputName -> "" }},
-                 
-   {S,      {   PDG -> {0},
+
+    {S1,      {  PDG -> {0},
                  Width -> 0, 
                  Mass -> Automatic,
-                 LaTeX -> "\\sigma_1",
+                 LaTeX -> "S_1",
                  OutputName -> "" }},
-                 
-   {Sc,      {   PDG -> {0},
+
+    {S2,      {  PDG -> {0},
                  Width -> 0, 
                  Mass -> Automatic,
-                 LaTeX -> "\\sigma_2",
+                 LaTeX -> "S_2",
                  OutputName -> "" }},
 
    {dR,     {LaTeX -> "d_R" }},

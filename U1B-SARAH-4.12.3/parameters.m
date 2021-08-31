@@ -56,16 +56,8 @@ ParameterDefinitions = {
 {ZZ, {Description ->   "Photon-Z-Z' Mixing Matrix"}},
 {ZW, {Description -> "W Mixing Matrix"}},
 
-{Yx, {OutputName -> Yx,
-      LaTeX -> "Y_x",
-      LesHouches -> YX}},
-
-{Yv, {OutputName -> Yv,
-      LaTeX -> "Y_\\nu",
-      LesHouches -> Yv}},
-
-{L1, {OutputName -> lam1,
-      LaTeX -> "\\lambda_1",
+{Lh, {OutputName -> lamh,
+      LaTeX -> "\\lambda_h",
       LesHouches -> {BL,1}}},
 
 
@@ -91,19 +83,23 @@ ParameterDefinitions = {
       
 {L33, {OutputName -> lam33,
       LaTeX -> "\\lambda_33",
-      LesHouches -> {BL,24}}},       
+      LesHouches -> {BL,24}}},    
 
 {MuP, {OutputName -> MUP,
       LaTeX -> "\\mu'",
-      LesHouches -> {BL,10}}},
+      LesHouches -> {BL,11}}},  
 
-{MuP2, {OutputName -> MUP2,
-      LaTeX -> "\\mu 2'",
-      LesHouches -> {BL,12}}},      
-
-{mu2, {OutputName -> mu,
+{mu1, {OutputName -> mu1,
+      LaTeX -> "\\mu_1",
+      LesHouches -> {BL,12}}},
+  
+{mu2, {OutputName -> mu2,
       LaTeX -> "\\mu_2",
-      LesHouches -> {BL,11}}},
+      LesHouches -> {BL,13}}}, 
+
+{muh, {OutputName -> muh,
+      LaTeX -> "\\mu_h",
+      LesHouches -> {BL,15}}},
 
 {mH2, {OutputName -> mH2,
       LaTeX -> "\\m^2_H",
@@ -145,54 +141,11 @@ ParameterDefinitions = {
 		LesHouches -> CHARGEMIX,
 		OutputName-> ZP      }},
 
-
-{VSs,       {   (* Rotation matrix *)
-                LaTeX -> "VS",
-                Real -> True,                 
-                LesHouches ->  VSs,
-                OutputName-> VSs }},
-
-{MP2,       {(*Description -> " "*)
-             LaTeX -> "M_P^2",
-             Real -> True, 
-             LesHouches -> MP2,
-	     OutputName-> MP2}},
-         
-{MPc2,       {(*Description -> " "*)
-             LaTeX -> "MP_c^2",
-             Real -> True, 
-             LesHouches -> MPc2,
-	     OutputName-> MPc2}},         
-
-{LamSH,     { LaTeX -> "\\lambda^{SH}",
-              Real -> True, 
-              LesHouches -> LSH,
-              OutputName -> "LSH" }},
-
 {LSbi,     { LaTeX -> "\\lambda^{Sbi}",
               Real -> True, 
               LesHouches -> LSbi,
               OutputName -> "LSbi" }},
-  
-
-{LamS,      { LaTeX -> "\\lambda^{S}",
-              Real -> True, 
-              LesHouches -> LS,
-              OutputName -> "LS" }},
-              
-{MDF,       { LaTeX -> "M_{\\Psi}",
-              Real -> True, 
-              LesHouches -> MDF,
-              OutputName -> MDF }},
-              
-{XV,        {(*Description ->"x-Left--Mixing-Matrix",*)
-             LesHouches -> XV,
-             OutputName -> XV }},
-             
-{XU,        {(*Description ->"x-Right-Lepton-Mixing-Matrix",*)
-             LesHouches -> XU,
-             OutputName -> XU }},
-             
+                             
 {YRA,       { LaTeX -> "h_a",   
               Real -> True, 
               LesHouches -> YRA,
@@ -232,14 +185,7 @@ ParameterDefinitions = {
  {YRH,       { LaTeX -> "h_h",   
               Real -> True, 
               LesHouches -> YRH,
-              OutputName-> YRH }},   
-              
-    
- {VSs,       {   (* Rotation matrix *)
-                LaTeX -> "VS",
-                Real -> True,                 
-                LesHouches ->  VSs,
-                OutputName-> VSs }}              
+              OutputName-> YRH }}       
 
  }; 
  
