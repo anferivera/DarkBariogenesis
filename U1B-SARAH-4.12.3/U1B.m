@@ -3,7 +3,7 @@ Off[General::spell]
 Model`Name = "U1B";
 Model`NameLaTeX =" U(1)B extension for Bariogenesis";
 Model`Authors = "Andres Rivera. Base in SM by F.Staub";
-Model`Date = "2021-08-30";
+Model`Date = "2021-09-02";
 
 (* 2014-11-06: Changed sign in Lagrangian *)
 (* 2020-22-07 Introduccing new scalar bi2 for Bariogenesis *)
@@ -16,36 +16,36 @@ Model`Date = "2021-08-30";
 
 (* Global Symmetries *)
 
-Global[[1]] = {Z[2], Z2};
+(*Global[[1]] = {Z[2], Z2};*)
 
 (* Gauge Superfields *)
 
-Gauge[[1]]={B,   U[1], hypercharge, g1,False,1};
-Gauge[[2]]={WB, SU[2], left,         g2,True,1};
-Gauge[[3]]={G,  SU[3], color,       g3,False,1};
-Gauge[[4]]={Bp,  U[1], U1B,       g1p, False,1};
+Gauge[[1]]={B,   U[1], hypercharge, g1,False};
+Gauge[[2]]={WB, SU[2], left,         g2,True};
+Gauge[[3]]={G,  SU[3], color,       g3,False};
+Gauge[[4]]={Bp,  U[1], U1B,       g1p, False};
 
 (* Chiral Superfields *)
 
-FermionFields[[1]] = {q, 3, {uL, dL},            1/6, 2,  3, -5/9, 1};  
-FermionFields[[2]] = {l, 3, {vL, eL},           -1/2, 2,  1,    0, 1};
-FermionFields[[3]] = {d, 3, conj[dR],            1/3, 1, -3,  5/9, 1};
-FermionFields[[4]] = {u, 3, conj[uR],           -2/3, 1, -3,  5/9, 1};
-FermionFields[[5]] = {e, 3, conj[eR],              1, 1,  1,    0, 1};
+FermionFields[[1]] = {q, 3, {uL, dL},            1/6, 2,  3, -5/9};  
+FermionFields[[2]] = {l, 3, {vL, eL},           -1/2, 2,  1,    0};
+FermionFields[[3]] = {d, 3, conj[dR],            1/3, 1, -3,  5/9};
+FermionFields[[4]] = {u, 3, conj[uR],           -2/3, 1, -3,  5/9};
+FermionFields[[5]] = {e, 3, conj[eR],              1, 1,  1,    0};
 
-FermionFields[[6]] = {v, 2, conj[vR],              0, 1,  1,   -5,  1};
-FermionFields[[7]] = {x3, 1, x3L,                  0, 1,  1,    3, -1};
-FermionFields[[8]] = {x4, 1, conj[x4R],            0, 1,  1,    2, -1};
-FermionFields[[9]] = {x5, 1, conj[x5R],            1, 1,  1,    1,  1};
-FermionFields[[10]] = {x6, 1, x6L,                -1, 1,  1,   -6,  1};
+FermionFields[[6]] = {v, 2, conj[vR],              0, 1,  1,   -5};
+FermionFields[[7]] = {x3, 1, x3L,                  0, 1,  1,    3};
+FermionFields[[8]] = {x4, 1, conj[x4R],            0, 1,  1,    2};
+FermionFields[[9]] = {x5, 1, conj[x5R],            1, 1,  1,    1}; (*like e in SM*)
+FermionFields[[10]] = {x6, 1, x6L,                -1, 1,  1,   -6};  (*thirth electron *)
 
-FermionFields[[11]] = {lp, 1, {vp, ep},         -1/2, 2,  1,   -1,  1};
-FermionFields[[12]] = {lpp, 1,conj[{-epp,vpp}],  1/2, 2,  1,    6,  1};
+FermionFields[[11]] = {lp, 1, {vp, ep},         -1/2, 2,  1,   -1}; (*like l in SM*)
+FermionFields[[12]] = {lpp, 1,conj[{-epp,vpp}],  1/2, 2,  1,    6}; (*thirt doublet*)
 
-ScalarFields[[1]] = {H,  1, {Hp, H0},           1/2, 2,  1,  0, 1};
-ScalarFields[[2]] = {bi,  1, BiD,                 0, 1,  1,  5, 1};
-ScalarFields[[3]] = {S1,  1, s1,                 -1, 1,  1, -1, 1};
-ScalarFields[[4]] = {S2,  1, s2,                 -1, 1,  1,  4, 1};
+ScalarFields[[1]] = {H,  1, {Hp, H0},           1/2, 2,  1,  0};
+ScalarFields[[2]] = {bi,  1, BiD,                 0, 1,  1,  5};
+ScalarFields[[3]] = {S1,  1, s1,                 -1, 1,  1, -1};
+ScalarFields[[4]] = {S2,  1, s2,                 -1, 1,  1,  4};
 
 
 (*----------------------------------------------*)
@@ -59,8 +59,8 @@ NameOfStates={GaugeES, EWSB};
 DEFINITION[GaugeES][Additional]= {
      {LagHC, {AddHC->True}},
      {LagNoHC,{ AddHC->False}},
-	{LagS1,{ AddHC->False}},	
-	{LagS2,{ AddHC->False}},
+	 {LagS1,{ AddHC->False}},	
+	 {LagS2,{ AddHC->False}},
      {Lagint , {AddHC->True}}
 };
 
@@ -97,7 +97,9 @@ DEFINITION[EWSB][MatterSector]=
      {{{dL}, {conj[dR]}}, {{DL,Vd}, {DR,Ud}}},
      {{{uL}, {conj[uR]}}, {{UL,Vu}, {UR,Uu}}},
      {{{eL}, {conj[eR]}}, {{EL,Ve}, {ER,Ue}}},
-     {{vL, conj[vR]}, {VL,ZM}}
+     
+     {{vL, conj[vR]}, {VL,ZM}},
+     {{{ep,x6L}, { conj[x5R],conj[epp]}}, {{ELD,VeD}, {ERD,UeD}}}     
 };  
 
 (*------------------------------------------------------*)
@@ -109,10 +111,15 @@ DEFINITION[EWSB][DiracSpinors]={
  Fe ->{  EL, conj[ER]},
  Fu ->{  UL, conj[UR]},
  Fv ->{  VL, conj[VL]},
+ 
  Fx ->{  x3L,x4R}, 
- Fes ->{  x6L, x5R},
- Fvv ->{  vp, vpp}, 
- Fed ->{  ep, epp}
+ Fvv ->{  vp, vpp},
+
+(* Fed ->{  ep, x5R}, (*second electron*)
+ Fes ->{  epp, x6L},(*thirth electron*) *)
+
+ FeD ->{  ELD, conj[ERD]} (*New two electrons*)
+ 
 };
 
 DEFINITION[EWSB][GaugeES]={

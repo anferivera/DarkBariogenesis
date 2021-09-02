@@ -163,12 +163,12 @@ ParameterDefinitions = {
                             
               
  {YRD,       { LaTeX -> "h_d", 
-              Real -> True, 
+              Real -> False, 
               LesHouches -> YRD,
               OutputName-> YRD }},     
               
  {YRE,       { LaTeX -> "hr_e", 
-                Real -> True, 
+                Real -> False, 
                 LesHouches -> YRE,
                 OutputName-> YRE }},
                 
@@ -178,14 +178,28 @@ ParameterDefinitions = {
                 OutputName-> YRF }},
                 
  {YRG,       { LaTeX -> "h_g",   
-              Real -> True, 
+              Real -> False, 
               LesHouches -> YRG,
               OutputName-> YRG }},   
               
  {YRH,       { LaTeX -> "h_h",   
               Real -> True, 
               LesHouches -> YRH,
-              OutputName-> YRH }}       
+              OutputName-> YRH }},
+              
+ {VeD,       {Description ->"New-Left-Lepton-Mixing-Matrix", 
+ 			 LaTeX -> "UD^e_L",
+             Dependence ->  None, 
+             Value -> None, 
+             LesHouches -> UELDMIX,
+             OutputName-> ZELD      }},            
+            
+ {UeD,       {Description ->"New-Right-Lepton-Mixing-Matrix", 
+ 			 LaTeX -> "UD^e_R",
+             Dependence ->  None, 
+             Value -> None, 
+             LesHouches -> UERDMIX,
+             OutputName-> ZERD      }}             
 
  }; 
  

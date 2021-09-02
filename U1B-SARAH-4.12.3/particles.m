@@ -77,8 +77,18 @@ ParticleDefinitions[GaugeES] = {
     {Fd,   { Description -> "Down-Quarks"}},   
     {Fu,   { Description -> "Up-Quarks"}},   
     {Fe,   { Description -> "Leptons" }},
-    {Fv,   { Description -> "Neutrinos",
-		   PDG ->{12,14,16,8810012,8810014} }},          
+   (* {Fv,   { Description -> "New-Neutrinos",
+		   PDG ->{12,14,16,8810012,8810014} }},    *)
+           
+   {Fv,   { Description -> "Neutrinos",
+                 PDG ->{12,14,16,8810012,8810014},
+                 PDG.IX ->{-110000001,-110000002,-110000003,-110000004,-110000005},
+                 Width -> {0,0,0,0,0}, 
+                 Mass -> {0,0,0,0,0},
+                 FeynArtsNr -> 1,
+                 ElectricCharge -> 0,
+                 LaTeX -> "\\nu",
+                 OutputName -> "nu"  }},            
                  
                 
     {Fx,  {  PDG -> {210001},
@@ -89,16 +99,7 @@ ParticleDefinitions[GaugeES] = {
                 ElectricCharge -> 0,
                 FeynArtsNr -> 6,
                 OutputName -> "Chi0" }},
-                
-     {Fes,  {  PDG -> {210002},
-                PDG.IX ->{-2110002},
-                Mass -> Automatic,
-                Width -> Automatic,
-                LaTeX -> "eR^{p}",
-                ElectricCharge -> -1,
-                FeynArtsNr -> 7,
-                OutputName -> "eRp" }},
-                                       
+               
      {Fvv,  {  PDG -> {210003},
                 PDG.IX ->{-2110003},
                 Mass -> Automatic,
@@ -106,7 +107,16 @@ ParticleDefinitions[GaugeES] = {
                 LaTeX -> "\\nu^{d}",
                 ElectricCharge -> 0,
                 FeynArtsNr -> 8,
-                OutputName -> "nud" }},
+                OutputName -> "nud" }},                
+                
+    (* {Fes,  {  PDG -> {210002},
+                PDG.IX ->{-2110002},
+                Mass -> Automatic,
+                Width -> Automatic,
+                LaTeX -> "eR^{p}",
+                ElectricCharge -> -1,
+                FeynArtsNr -> 7,
+                OutputName -> "eRp" }},
                 
      {Fed,  {  PDG -> {210004},
                 PDG.IX ->{-2110004},
@@ -115,7 +125,16 @@ ParticleDefinitions[GaugeES] = {
                 LaTeX -> "eR^{pp}",
                 ElectricCharge -> -1,
                 FeynArtsNr -> 9,
-                OutputName -> "eRpp" }}       
+                OutputName -> "eRpp" }}   *)   
+    
+     {FeD,  {  PDG -> {210002,210004},
+                PDG.IX ->{-2110002,-2110004},
+                Mass -> LesHouches,
+                Width -> Automatic,
+                LaTeX -> "eD",
+                ElectricCharge -> -1,
+                FeynArtsNr -> 9,
+                OutputName -> "eD" }}     
      
         };    
           

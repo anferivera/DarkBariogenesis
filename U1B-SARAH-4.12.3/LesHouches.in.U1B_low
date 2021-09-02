@@ -17,19 +17,19 @@ Block MINPAR      # Input parameters
 4   1.0000000E-01    # YRAINPUT
 5   2.0000000E-01    # YRBINPUT
 6   3.0000000E-01    # YRCINPUT
-7   1.0000000E-02    # YRFINPUT
+7   1.0000000E-03    # YRFINPUT
 8   2.0000000E-02    # YRGINPUT
 9   1.2000000E-02    # YRHINPUT
 10   2.5000000E+03    # vXInput
 11   5.0000000E-01    # g1pINPUT
-12   0.0000000E-04    # g1p1INPUT
-13   0.0000000E-05    # g11pINPUT
+12   0.0000000E-05    # g1p1INPUT
+13   0.0000000E+00    # g11pINPUT
 14   3.0000000E-03    # Lambda22INPUT
 15   4.0000000E-03    # Lambda32INPUT
 16   2.0000000E+06    # mu1INPUT
 17   4.0000000E-03    # Lambda23INPUT
 18   5.0000000E-03    # Lambda33INPUT
-19   3.0000000E+07    # mu2INPUT
+19   3.0000000E+08    # mu2INPUT
 Block SPhenoInput   # SPheno specific input 
   1 -1              # error level 
   2  0              # SPA conventions 
@@ -59,7 +59,7 @@ Block SPhenoInput   # SPheno specific input
  65 1               # Solution tadpole equation 
  66 1               # Two-Scale Matching 
  67 1               # effective Higgs mass calculation 
- 75 1               # Write WHIZARD files 
+ 75 0               # Write WHIZARD files 
  76 1               # Write HiggsBounds file   
  77 0               # Output for MicrOmegas (running masses for light quarks; real mixing matrices)   
  78 0               # Output for MadGraph (writes also vanishing blocks)   
