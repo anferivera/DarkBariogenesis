@@ -49,13 +49,13 @@ ParticleDefinitions[GaugeES] = {
                  OutputName -> "Ah" }},                      
 
     {Hm,   { Description -> "Charged Higgs", 
-	     PDG -> {0, 900037, 900038},
-	     PDG.IX -> {0, -10000602,  -10000603},
-	     Width -> {0, External, External},
-	     Mass -> {0, LesHouches, LesHouches},
+	     PDG -> {0, 900037, 900038, 900039, 900040},
+	     PDG.IX -> {0, -10000602,  -10000603,  -10000604,  -10000605},
+	     Width -> {0, External, External, External, External},
+	     Mass -> {0, LesHouches, LesHouches, LesHouches, LesHouches},
 	     ElectricCharge -> -1,
-	     Latex -> {"Hm^-","S^-_1","S^-_2"},
-	     OutputName -> {"Hm","s1","s2"}}},  
+	     Latex -> {"Hm","\\sigma^{1}","\\sigma^{2}","\\sigma^{3}","\\sigma^{4}"},
+	     OutputName -> {"Hm","s1","s2","s3","s4"}}},  
                              
       
     {VP,   { Description -> "Photon"}}, 

@@ -38,9 +38,8 @@ ParameterDefinitions = {
 			  DependenceNum ->  Sqrt[2]/vH* {{Mass[Fe,1],0,0},
              									{0, Mass[Fe,2],0},
              									{0, 0, Mass[Fe,3]}}}}, 
-                                                                            
-                                                                           
-{Mu,         { Description -> "SM Mu Parameter"}},                                        
+                                                                                                                                                       
+{Mu,         { Description -> "SM Mu Parameter"}},         (*posible warning*)                               
 {\[Lambda],  { Description -> "SM Higgs Selfcouplings"}},
 {vH,          { Description -> "EW-VEV",
                DependenceSPheno -> None }},
@@ -57,61 +56,49 @@ ParameterDefinitions = {
 {ZW, {Description -> "W Mixing Matrix"}},
 
 {Lh, {OutputName -> lamh,
-      LaTeX -> "\\lambda_h",
+      LaTeX -> "l_h",
       LesHouches -> {BL,1}}},
 
 
 {L2, {OutputName -> lam2,
       LaTeX -> "\\lambda_2",
       LesHouches -> {BL,2}}},
-
-{L22, {OutputName -> lam22,
-      LaTeX -> "\\lambda_22",
-      LesHouches -> {BL,22}}},
-
-{L23, {OutputName -> lam23,
-      LaTeX -> "\\lambda_23",
-      LesHouches -> {BL,23}}},
-
+      
 {L3, {OutputName -> lam3,
       LaTeX -> "\\lambda_3",
-      LesHouches -> {BL,3}}},
+      LesHouches -> {BL,3}}},   
       
-{L32, {OutputName -> lam32,
-      LaTeX -> "\\lambda_32",
-      LesHouches -> {BL,4}}}, 
-      
-{L33, {OutputName -> lam33,
-      LaTeX -> "\\lambda_33",
-      LesHouches -> {BL,24}}},    
-
 {MuP, {OutputName -> MUP,
-      LaTeX -> "\\mu'",
-      LesHouches -> {BL,11}}},  
-
-{mu1, {OutputName -> mu1,
-      LaTeX -> "\\mu_1",
-      LesHouches -> {BL,12}}},
-  
-{mu2, {OutputName -> mu2,
-      LaTeX -> "\\mu_2",
-      LesHouches -> {BL,13}}}, 
+      LaTeX -> "\\mu_p'",
+      LesHouches -> {BL,11}}},       
 
 {muh, {OutputName -> muh,
       LaTeX -> "\\mu_h",
       LesHouches -> {BL,15}}},
+      
+{L22, {OutputName -> lam22,
+      LaTeX -> "\\lambda_{22}",
+      LesHouches -> L22}},
 
-{mH2, {OutputName -> mH2,
-      LaTeX -> "\\m^2_H",
-      LesHouches -> {BL,20}}},
+{L23, {OutputName -> lam23,
+      LaTeX -> "\\lambda_{23}",
+      LesHouches -> L23}},
+      
+{L32, {OutputName -> lam32,
+      LaTeX -> "\\lambda_{32}",
+      LesHouches -> L32}}, 
+      
+{L33, {OutputName -> lam33,
+      LaTeX -> "\\lambda_{33}",
+      LesHouches -> L33}},     
 
-{mchi2, {OutputName -> mX2,
-      LaTeX -> "\\m^2_\\chi",
-      LesHouches -> {BL,21}}},
-
-{MUS, {OutputName -> muS,
-      LaTeX -> "\\mu_s",
-      LesHouches -> {BL,30}}},
+{mu1, {OutputName -> mu1,
+      LaTeX -> "\\mu_1",
+      LesHouches -> mu1}},
+  
+{mu2, {OutputName -> mu2,
+      LaTeX -> "\\mu_2",
+      LesHouches -> mu2}}, 
       
 {Vu,        {Description ->"Left-Up-Mixing-Matrix"}},
 {Vd,        {Description ->"Left-Down-Mixing-Matrix"}},
@@ -146,43 +133,42 @@ ParameterDefinitions = {
               LesHouches -> LSbi,
               OutputName -> "LSbi" }},
                              
-{YRA,       { LaTeX -> "h_a",   
+{YRA,       { LaTeX -> "\\lambda_a",   
               Real -> True, 
               LesHouches -> YRA,
               OutputName-> YRA }},   
               
-{YRB,       { LaTeX -> "h_b",   
+{YRB,       { LaTeX -> "\\lambda_b",   
               Real -> True, 
               LesHouches -> YRB,
               OutputName-> YRB }},      
  
- {YRC,       { LaTeX -> "h_c",   
+ {YRC,       { LaTeX -> "\\lambda_c",   
               Real -> True, 
               LesHouches -> YRC,
               OutputName-> YRC }}, 
-                            
               
- {YRD,       { LaTeX -> "h_d", 
+ {YRD,       { LaTeX -> "\\lambda_d", 
               Real -> False, 
               LesHouches -> YRD,
               OutputName-> YRD }},     
               
- {YRE,       { LaTeX -> "hr_e", 
+ {YRE,       { LaTeX -> "\\lambda_e", 
                 Real -> False, 
                 LesHouches -> YRE,
                 OutputName-> YRE }},
                 
- {YRF,       { LaTeX -> "hr_f", 
+ {YRF,       { LaTeX -> "\\lambda_f", 
                 Real -> True, 
                 LesHouches -> YRF,
                 OutputName-> YRF }},
                 
- {YRG,       { LaTeX -> "h_g",   
+ {YRG,       { LaTeX -> "\\lambda_g",   
               Real -> False, 
               LesHouches -> YRG,
               OutputName-> YRG }},   
               
- {YRH,       { LaTeX -> "h_h",   
+ {YRH,       { LaTeX -> "\\lambda_h",   
               Real -> True, 
               LesHouches -> YRH,
               OutputName-> YRH }},
