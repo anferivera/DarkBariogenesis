@@ -3,12 +3,14 @@ Off[General::spell]
 Model`Name = "U1B";
 Model`NameLaTeX =" U(1)B extension for Bariogenesis";
 Model`Authors = "Andres Rivera. Base in SM by F.Staub";
-Model`Date = "2021-09-02";
+Model`Date = "2021-08-09";
 
 (* 2014-11-06: Changed sign in Lagrangian *)
 (* 2020-22-07 Introduccing new scalar bi2 for Bariogenesis *)
 (* 2021-21-07 Introducing the U(1)B*)
-(*2021-18-08  changin H hypercharge*)
+(* 2021-18-08 changin H hypercharge*)
+(* 2021-07-09 whithout the tensor L22, L32 terms*)
+(* 2021-08-09 two scalars bi bj*)
 
 (*-------------------------------------------*)
 (*   Particle Content*)
@@ -37,15 +39,16 @@ FermionFields[[6]] = {v, 2, conj[vR],              0, 1,  1,   -5,  1};
 FermionFields[[7]] = {x3, 1, x3L,                  0, 1,  1,    3, -1};
 FermionFields[[8]] = {x4, 1, conj[x4R],            0, 1,  1,    2, -1};
 FermionFields[[9]] = {x5, 1, conj[x5R],            1, 1,  1,    1,  1}; (*like e in SM*)
-FermionFields[[10]] = {x6, 1, x6L,                -1, 1,  1,   -6,  1};  (*thirth electron *)
+FermionFields[[10]] = {x6, 1, x6L,                -1, 1,  1,   -6,  1}; (*thirth electron *)
 
 FermionFields[[11]] = {lp, 1, {vp, ep},         -1/2, 2,  1,   -1,  1}; (*like l in SM*)
-FermionFields[[12]] = {lpp, 1,conj[{-epp,vpp}],  1/2, 2,  1,    6,  1}; (*thirt doublet*)
+FermionFields[[12]] = {lpp, 1,conj[{-epp,vpp}],  1/2, 2,  1,    6,  1}; (*thirth doublet*)
 
 ScalarFields[[1]] = {H,  1, {Hp, H0},           1/2, 2,  1,  0,  1};
 ScalarFields[[2]] = {bi,  1, BiD,                 0, 1,  1,  5,  1};
-ScalarFields[[3]] = {S1,  2, s1,                 -1, 1,  1, -1,  1};
-ScalarFields[[4]] = {S2,  2, s2,                 -1, 1,  1,  4,  1};
+ScalarFields[[3]] = {bj,  1, BjD,                 0, 1,  1,  5,  1};
+ScalarFields[[4]] = {S1,  2, s1,                 -1, 1,  1, -1,  1};
+ScalarFields[[5]] = {S2,  2, s2,                 -1, 1,  1,  4,  1};
 
 
 (*----------------------------------------------*)
@@ -57,21 +60,31 @@ NameOfStates={GaugeES, EWSB};
 (* ----- Before EWSB ----- *)
 
 DEFINITION[GaugeES][Additional]= {
-     {LagHC, {AddHC->True}},
-     {LagNoHC,{ AddHC->False}},
-	 {LagS1,{ AddHC->False}},	
-	 {LagS2,{ AddHC->False}},
+     {LagHCSM, {AddHC->True}},
+     {LagNoHCSM,{ AddHC->False}},
+     {LagNoHCbi,{ AddHC->False}},
+     {LagNoHCbj,{ AddHC->False}},
+     {LagS1,{ AddHC->False}}, 
+     {LagS2,{ AddHC->False}},
+     {Lagintbi , {AddHC->True}},
+     {Lagintbj , {AddHC->True}},
      {Lagint , {AddHC->True}}
 };
 
-LagHC = - (+ Yd conj[H].d.q + Ye conj[H].e.l + Yu H.u.q);
+LagHCSM = - (+ Yd conj[H].d.q + Ye conj[H].e.l + Yu H.u.q);
 
-LagNoHC = -(muh conj[H].H - Lh conj[H].H.conj[H].H + MuP conj[bi].bi - L2 conj[bi].bi.conj[bi].bi - L3 conj[bi].bi.conj[H].H );
+LagNoHCSM = -(muh conj[H].H - Lh conj[H].H.conj[H].H );
 
-LagS1 = -(mu1 conj[S1].S1  + L22 conj[S1].S1.conj[S1].S1 + L32 conj[S1].S1.conj[H].H );
-LagS2 = -(mu2 conj[S2].S2 + L23 conj[S2].S2.conj[S2].S2 + L33 conj[S2].S2.conj[H].H );
+LagNoHCbi = -(mui conj[bi].bi - L21 conj[bi].bi.conj[bi].bi - L31 conj[bi].bi.conj[H].H );
+LagNoHCbj = -(muj conj[bj].bj - L22 conj[bj].bj.conj[bj].bj - L32 conj[bj].bj.conj[H].H );
 
-Lagint = -( YRA conj[bi].x3.x4 + YRB bi.x5.x6 + YRC conj[bi].lp.lpp + YRD conj[S1].l.lp + YRE S2.x5.v + YRF conj[S1].S2.conj[bi] + YRG conj[H].x5.lp + YRH H.x6.lpp );
+LagS1 = -(mu1 conj[S1].S1 + L41 conj[S1].S1.conj[H].H );
+LagS2 = -(mu2 conj[S2].S2 + L42 conj[S2].S2.conj[H].H );
+
+Lagintbi = -( YA1 conj[bi].x3.x4 + YB1 bi.x5.x6 + YC1 conj[bi].lp.lpp + YF1 conj[S1].S2.conj[bi] );
+Lagintbj = -( YA2 conj[bj].x3.x4 + YB2 bj.x5.x6 + YC2 conj[bj].lp.lpp + YF2 conj[S1].S2.conj[bj] );
+
+Lagint = -( YRD conj[S1].l.lp + YRE S2.x5.v + YRG conj[H].x5.lp + YRH H.x6.lpp );
 
 (* Gauge Sector *)
 
@@ -86,12 +99,14 @@ DEFINITION[EWSB][GaugeSector] =
 
 DEFINITION[EWSB][VEVs]= 
 {    {H0, {vH, 1/Sqrt[2]}, {sigmaH, \[ImaginaryI]/Sqrt[2]},{phiH, 1/Sqrt[2]}},
-     {BiD,{vX, 1/Sqrt[2]}, {sigmaB, \[ImaginaryI]/Sqrt[2]},{phiB, 1/Sqrt[2]}}   };
+     {BiD,{vX, 1/Sqrt[2]}, {sigmaB, \[ImaginaryI]/Sqrt[2]},{phiB, 1/Sqrt[2]}},
+     {BjD,{vX2, 1/Sqrt[2]}, {sigmaBj, \[ImaginaryI]/Sqrt[2]},{phiBj, 1/Sqrt[2]}}
+};
  
 DEFINITION[EWSB][MatterSector]=   
     {
-     {{phiH,phiB},{hh,ZH}},
-     {{sigmaH,sigmaB},{Ah,ZA}},
+     {{phiH,phiB,phiBj},{hh,ZH}},
+     {{sigmaH,sigmaB,sigmaBj},{Ah,ZA}},
      {{conj[Hp],s1,s2},{Hm,ZP}},
 
      {{{dL}, {conj[dR]}}, {{DL,Vd}, {DR,Ud}}},

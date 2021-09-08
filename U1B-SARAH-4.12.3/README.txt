@@ -7,5 +7,7 @@ ok. runing step by step
 3. Computing neutrino masses at tree level.
 4. Using SARAH-4.12.3
 5. Using Sheno-4.0.3
+6. Two neutrino masive
+7. Two scalars (S add phi) the gets VEV
 
 

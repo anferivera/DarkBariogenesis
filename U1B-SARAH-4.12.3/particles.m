@@ -33,7 +33,7 @@ ParticleDefinitions[GaugeES] = {
             
       
     {hh   ,  { Description -> "Higgs",
-                 PDG -> {25,35},
+                 PDG -> {25,35,45},
                  Width -> Automatic, 
                  Mass ->LesHouches,
                  FeynArtsNr -> 1,
@@ -41,8 +41,8 @@ ParticleDefinitions[GaugeES] = {
                  OutputName -> "h" }}, 
                  
     {Ah   ,  {  Description -> "Pseudo-Scalar Higgs",
-                 PDG -> {0,0},
-                 Width -> {0, External}, 
+                 PDG -> {0,0,0},
+                 Width -> {0, External, External}, 
                  Mass ->LesHouches,
                  FeynArtsNr -> 2,
                  LaTeX -> "A_h",
