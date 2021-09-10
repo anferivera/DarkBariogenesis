@@ -75,16 +75,16 @@ LagHCSM = - (+ Yd conj[H].d.q + Ye conj[H].e.l + Yu H.u.q);
 
 LagNoHCSM = -(muh conj[H].H - Lh conj[H].H.conj[H].H );
 
-LagNoHCbi = -(mui conj[bi].bi - L21 conj[bi].bi.conj[bi].bi - L31 conj[bi].bi.conj[H].H );
-LagNoHCbj = -(muj conj[bj].bj - L22 conj[bj].bj.conj[bj].bj - L32 conj[bj].bj.conj[H].H );
+LagNoHCbi = -(mui conj[bi].bi - L2 conj[bi].bi.conj[bi].bi - L3 conj[bi].bi.conj[H].H );
+LagNoHCbj = -(muj conj[bj].bj - L4 conj[bj].bj.conj[bj].bj - L5 conj[bj].bj.conj[H].H );
 
-LagS1 = -(mu1 conj[S1].S1 + L41 conj[S1].S1.conj[H].H );
-LagS2 = -(mu2 conj[S2].S2 + L42 conj[S2].S2.conj[H].H );
+LagS1 = -(m1 conj[S1].S1 + L6 conj[S1].S1.conj[H].H );
+LagS2 = -(m2 conj[S2].S2 + L7 conj[S2].S2.conj[H].H );
 
-Lagintbi = -( YA1 conj[bi].x3.x4 + YB1 bi.x5.x6 + YC1 conj[bi].lp.lpp + YF1 conj[S1].S2.conj[bi] );
-Lagintbj = -( YA2 conj[bj].x3.x4 + YB2 bj.x5.x6 + YC2 conj[bj].lp.lpp + YF2 conj[S1].S2.conj[bj] );
+Lagintbi = -( YA1 conj[bi].x3.x4 + YB1 bi.x5.x6 + YC1 conj[bi].lp.lpp + Fi conj[S1].S2.conj[bi] );
+Lagintbj = -( YA2 conj[bj].x3.x4 + YB2 bj.x5.x6 + YC2 conj[bj].lp.lpp + Fj conj[S1].S2.conj[bj] );
 
-Lagint = -( YRD conj[S1].l.lp + YRE S2.x5.v + YRG conj[H].x5.lp + YRH H.x6.lpp );
+Lagint = -( LD conj[S1].l.lp + LE S2.x5.v + YRG conj[H].x5.lp + YRH H.x6.lpp );
 
 (* Gauge Sector *)
 

@@ -19,7 +19,7 @@
 #  
 # in case of problems send email to florian.staub@kit.edu and goodsell@lpthe.jussieu.fr 
 # ----------------------------------------------------------------------
-# Created: 08.09.2021,  13:11
+# Created: 09.09.2021,  23:35
 Block SPINFO         # Program information
      1   SPhenoSARAH      # spectrum calculator
      2   v4.0.3      # version number of SPheno
@@ -31,10 +31,10 @@ Block MODSEL  # Input parameters
      6  1   #  switching on flavour violation
 Block MINPAR  # Input parameters
     1   -1.27000000E-01  # LambdahINPUT
-    2   -7.20000000E-02  # Lambda21INPUT
-    3    1.20000000E-03  # Lambda31INPUT
-    4   -7.20000000E-03  # Lambda22INPUT
-    5    1.00000000E-03  # Lambda32INPUT
+    2   -7.20000000E-02  # Lambda2INPUT
+    3    1.20000000E-03  # Lambda3INPUT
+    4   -7.20000000E-03  # Lambda4INPUT
+    5    1.00000000E-03  # Lambda5INPUT
     6    1.00000000E-01  # YA1INPUT
     7    1.00000000E-02  # YA2INPUT
     8    2.00000000E-01  # YB1INPUT
@@ -70,10 +70,10 @@ Block GAUGE Q=  1.73500000E+02  # (Renormalization Scale)
   10    0.00000000E+00  # gYB
 Block BL Q=  1.73500000E+02  # (Renormalization Scale)
    1   -1.27000000E-01  # lamh
-   2   -7.20000000E-02  # lam21
-   3    1.20000000E-03  # lam31
-   4   -7.20000000E-03  # lam22
-   5    1.00000000E-03  # lam32
+   2   -7.20000000E-02  # lam2
+   3    1.20000000E-03  # lam3
+   4   -7.20000000E-03  # lam4
+   5    1.00000000E-03  # lam5
   15    8.63464151E+03  # muh
   11   -4.49964022E+05  # mui
   12   -1.79970018E+05  # muj
@@ -109,16 +109,16 @@ Block LOOPBL Q=  1.73500000E+02  # (Renormalization Scale)
   15   -5.90022109E+06  # muh
   11   -1.23848384E+09  # mui
   12   -1.23797527E+09  # muj
-Block L41 Q=  1.73500000E+02  # (Renormalization Scale)
-  1  1     1.00000000E-02   # Real(lam41(1,1),dp)
-  1  2     2.00000000E-02   # Real(lam41(1,2),dp)
-  2  1     3.00000000E-02   # Real(lam41(2,1),dp)
-  2  2     3.00000000E-02   # Real(lam41(2,2),dp)
-Block L42 Q=  1.73500000E+02  # (Renormalization Scale)
-  1  1     1.10000000E-02   # Real(lam42(1,1),dp)
-  1  2     2.00000000E-03   # Real(lam42(1,2),dp)
-  2  1     3.10000000E-02   # Real(lam42(2,1),dp)
-  2  2     4.00000000E-02   # Real(lam42(2,2),dp)
+Block L6 Q=  1.73500000E+02  # (Renormalization Scale)
+  1  1     1.00000000E-02   # Real(lam6(1,1),dp)
+  1  2     2.00000000E-02   # Real(lam6(1,2),dp)
+  2  1     3.00000000E-02   # Real(lam6(2,1),dp)
+  2  2     3.00000000E-02   # Real(lam6(2,2),dp)
+Block L7 Q=  1.73500000E+02  # (Renormalization Scale)
+  1  1     1.10000000E-02   # Real(lam7(1,1),dp)
+  1  2     2.00000000E-03   # Real(lam7(1,2),dp)
+  2  1     3.10000000E-02   # Real(lam7(2,1),dp)
+  2  2     4.00000000E-02   # Real(lam7(2,2),dp)
 Block Yu Q=  1.73500000E+02  # (Renormalization Scale)
   1  1     7.68380438E-06   # Real(Yu(1,1),dp)
   1  2     1.77726535E-06   # Real(Yu(1,2),dp)
@@ -149,43 +149,44 @@ Block Ye Q=  1.73500000E+02  # (Renormalization Scale)
   3  1     0.00000000E+00   # Real(Ye(3,1),dp)
   3  2     0.00000000E+00   # Real(Ye(3,2),dp)
   3  3     1.00934265E-02   # Real(Ye(3,3),dp)
-Block YRE Q=  1.73500000E+02  # (Renormalization Scale)
-  1  1     1.00000000E-01   # Real(YRE(1,1),dp)
-  1  2     2.00000000E-02   # Real(YRE(1,2),dp)
-  2  1     1.00000000E-03   # Real(YRE(2,1),dp)
-  2  2     2.00000000E-02   # Real(YRE(2,2),dp)
-Block YRD Q=  1.73500000E+02  # (Renormalization Scale)
-  1  1     1.00000000E-01   # Real(YRD(1,1),dp)
-  1  2     2.00000000E-02   # Real(YRD(1,2),dp)
-  1  3     3.00000000E-02   # Real(YRD(1,3),dp)
-  2  1     1.00000000E-02   # Real(YRD(2,1),dp)
-  2  2     2.00000000E-02   # Real(YRD(2,2),dp)
-  2  3     3.00000000E-02   # Real(YRD(2,3),dp)
-Block YF1 Q=  1.73500000E+02  # (Renormalization Scale)
-  1  1     1.00000000E-01   # YF1(1,1)
-  1  2     2.00000000E-02   # YF1(1,2)
-  2  1     1.00000000E-02   # YF1(2,1)
-  2  2     2.00000000E-02   # YF1(2,2)
-Block YF2 Q=  1.73500000E+02  # (Renormalization Scale)
-  1  1     1.00000000E-02   # YF2(1,1)
-  1  2     2.00000000E-03   # YF2(1,2)
-  2  1     1.00000000E-03   # YF2(2,1)
-  2  2     2.00000000E-03   # YF2(2,2)
-Block mu1 Q=  1.73500000E+02  # (Renormalization Scale)
-  1  1     2.00000000E+06   # Real(mu1(1,1),dp)
-  1  2     0.00000000E+00   # Real(mu1(1,2),dp)
-  2  1     0.00000000E+00   # Real(mu1(2,1),dp)
-  2  2     2.00000000E+07   # Real(mu1(2,2),dp)
-Block mu2 Q=  1.73500000E+02  # (Renormalization Scale)
-  1  1     2.00000000E+08   # Real(mu2(1,1),dp)
-  1  2     0.00000000E+00   # Real(mu2(1,2),dp)
-  2  1     0.00000000E+00   # Real(mu2(2,1),dp)
-  2  2     2.00000000E+09   # Real(mu2(2,2),dp)
+Block LE Q=  1.73500000E+02  # (Renormalization Scale)
+  1  1     1.00000000E-01   # Real(LE(1,1),dp)
+  1  2     2.00000000E-02   # Real(LE(1,2),dp)
+  2  1     1.00000000E-03   # Real(LE(2,1),dp)
+  2  2     2.00000000E-02   # Real(LE(2,2),dp)
+Block LD Q=  1.73500000E+02  # (Renormalization Scale)
+  1  1     1.00000000E-01   # Real(LD(1,1),dp)
+  1  2     2.00000000E-02   # Real(LD(1,2),dp)
+  1  3     3.00000000E-02   # Real(LD(1,3),dp)
+  2  1     1.00000000E-02   # Real(LD(2,1),dp)
+  2  2     2.00000000E-02   # Real(LD(2,2),dp)
+  2  3     3.00000000E-02   # Real(LD(2,3),dp)
+Block Fi Q=  1.73500000E+02  # (Renormalization Scale)
+  1  1     1.00000000E-01   # Fi(1,1)
+  1  2     2.00000000E-02   # Fi(1,2)
+  2  1     1.00000000E-02   # Fi(2,1)
+  2  2     2.00000000E-02   # Fi(2,2)
+Block Fj Q=  1.73500000E+02  # (Renormalization Scale)
+  1  1     1.00000000E-02   # Fj(1,1)
+  1  2     2.00000000E-03   # Fj(1,2)
+  2  1     1.00000000E-03   # Fj(2,1)
+  2  2     2.00000000E-03   # Fj(2,2)
+Block m1 Q=  1.73500000E+02  # (Renormalization Scale)
+  1  1     2.00000000E+06   # Real(m1(1,1),dp)
+  1  2     0.00000000E+00   # Real(m1(1,2),dp)
+  2  1     0.00000000E+00   # Real(m1(2,1),dp)
+  2  2     2.00000000E+07   # Real(m1(2,2),dp)
+Block m2 Q=  1.73500000E+02  # (Renormalization Scale)
+  1  1     2.00000000E+08   # Real(m2(1,1),dp)
+  1  2     0.00000000E+00   # Real(m2(1,2),dp)
+  2  1     0.00000000E+00   # Real(m2(2,1),dp)
+  2  2     2.00000000E+09   # Real(m2(2,2),dp)
 Block MASS  # Mass spectrum
 #   PDG code      mass          particle
         25     1.23392702E+02  # hh_1
         35     6.00003623E+02  # hh_2
         45     9.48683620E+02  # hh_3
+        55     1.00000000E-05  # Ah_3
     900037     1.41431955E+03  # Hm_2
     900038     4.47223652E+03  # Hm_3
     900039     1.41421473E+04  # Hm_4
@@ -193,14 +194,14 @@ Block MASS  # Mass spectrum
         23     9.11887000E+01  # VZ
         24     7.98171016E+01  # VWm
         31     1.71163299E+04  # VZp
-         1     5.00000000E-03  # Fd_1
-         3     9.50000000E-02  # Fd_2
+         1     2.74556703E-03  # Fd_1
+         3     5.21652655E-02  # Fd_2
          5     4.18000000E+00  # Fd_3
-         2     2.50000000E-03  # Fu_1
-         4     1.27000000E+00  # Fu_2
+         2     1.36560286E-03  # Fu_1
+         4     6.93726322E-01  # Fu_2
          6     1.73500000E+02  # Fu_3
-        11     5.10998930E-04  # Fe_1
-        13     1.05658372E-01  # Fe_2
+        11     5.02660789E-04  # Fe_1
+        13     1.03934309E-01  # Fe_2
         15     1.77669000E+00  # Fe_3
         12    -4.22908351E-28  # Fv_1
         14    -1.12435519E-12  # Fv_2
@@ -426,12 +427,12 @@ Block HiggsBoundsInputHiggsCouplingsFermions #
     8.30300783E-04    0.00000000E+00        3             45         4         4 # h_3 c c coupling 
     8.30300783E-04    0.00000000E+00        3             45        15        15 # h_3 tau tau coupling 
     8.30300783E-04    0.00000000E+00        3             45        13        13 # h_3 mu mu coupling  
-    0.00000000E+00    0.00000000E+00        3              0         5         5 # A_3 b b coupling 
-    0.00000000E+00    0.00000000E+00        3              0         3         3 # A_3 s s coupling 
-    0.00000000E+00    0.00000000E+00        3              0         6         6 # A_3 t t coupling 
-    0.00000000E+00    0.00000000E+00        3              0         4         4 # A_3 c c coupling 
-    0.00000000E+00    0.00000000E+00        3              0        15        15 # A_3 tau tau coupling 
-    0.00000000E+00    0.00000000E+00        3              0        13        13 # A_3 mu mu coupling 
+    0.00000000E+00    0.00000000E+00        3             55         5         5 # A_3 b b coupling 
+    0.00000000E+00    0.00000000E+00        3             55         3         3 # A_3 s s coupling 
+    0.00000000E+00    0.00000000E+00        3             55         6         6 # A_3 t t coupling 
+    0.00000000E+00    0.00000000E+00        3             55         4         4 # A_3 c c coupling 
+    0.00000000E+00    0.00000000E+00        3             55        15        15 # A_3 tau tau coupling 
+    0.00000000E+00    0.00000000E+00        3             55        13        13 # A_3 mu mu coupling 
 Block HiggsBoundsInputHiggsCouplingsBosons # 
     9.99993350E-01        3             25        24        24 # h_1 W W coupling 
     9.99993350E-01        3             25        23        23 # h_1 Z Z coupling  
@@ -451,25 +452,25 @@ Block HiggsBoundsInputHiggsCouplingsBosons #
     2.27675337E-01        3             45        22        22 # h_3 gamma gamma coupling 
     8.30185575E-04        3             45        21        21 # h_3 g g coupling 
     0.00000000E+00        4             45        21        21        23 # h_3 g g Z coupling 
-    0.00000000E+00        3              0        24        24 # A_3 W W coupling 
-    0.00000000E+00        3              0        23        23 # A_3 Z Z coupling 
-    0.00000000E+00        3              0        23        22 # A_3 Z gamma coupling 
-    7.96107457E-18        3              0        22        22 # A_3 gamma gamma coupling 
-    0.00000000E+00        3              0        21        21 # A_3 g g coupling 
-    0.00000000E+00        4              0        21        21        23 # A_3 g g Z coupling 
+    0.00000000E+00        3             55        24        24 # A_3 W W coupling 
+    0.00000000E+00        3             55        23        23 # A_3 Z Z coupling 
+    0.00000000E+00        3             55        23        22 # A_3 Z gamma coupling 
+    7.96107457E-18        3             55        22        22 # A_3 gamma gamma coupling 
+    0.00000000E+00        3             55        21        21 # A_3 g g coupling 
+    0.00000000E+00        4             55        21        21        23 # A_3 g g Z coupling 
     0.00000000E+00        3             25        25        23 # h_1 h_1 Z coupling  
     0.00000000E+00        3             25        35        23 # h_1 h_2 Z coupling  
     0.00000000E+00        3             25        45        23 # h_1 h_3 Z coupling  
-    0.00000000E+00        3             25         0        23 # h_1 A_3 Z coupling 
+    0.00000000E+00        3             25        55        23 # h_1 A_3 Z coupling 
     0.00000000E+00        3             35        25        23 # h_2 h_1 Z coupling  
     0.00000000E+00        3             35        35        23 # h_2 h_2 Z coupling  
     0.00000000E+00        3             35        45        23 # h_2 h_3 Z coupling  
-    0.00000000E+00        3             35         0        23 # h_2 A_3 Z coupling 
+    0.00000000E+00        3             35        55        23 # h_2 A_3 Z coupling 
     0.00000000E+00        3             45        25        23 # h_3 h_1 Z coupling  
     0.00000000E+00        3             45        35        23 # h_3 h_2 Z coupling  
     0.00000000E+00        3             45        45        23 # h_3 h_3 Z coupling  
-    0.00000000E+00        3             45         0        23 # h_3 A_3 Z coupling 
-    0.00000000E+00        3              0         0        23 # A_3 A_3 Z coupling 
+    0.00000000E+00        3             45        55        23 # h_3 A_3 Z coupling 
+    0.00000000E+00        3             55        55        23 # A_3 A_3 Z coupling 
 Block EFFHIGGSCOUPLINGS # values of loop-induced couplings 
         25           22           22     0.33114364E-04 # H-Photon-Photon 
         25           21           21     0.66229281E-04 # H-Gluon-Gluon 
@@ -480,9 +481,9 @@ Block EFFHIGGSCOUPLINGS # values of loop-induced couplings
         45           22           22     0.15187817E-05 # H-Photon-Photon 
         45           21           21     0.37444244E-07 # H-Gluon-Gluon 
         45           22           23     0.00000000E+00 # H-Photon-Z (not yet calculated by SPheno) 
-         0           22           22     0.13092162E-21 # A-Photon-Photon 
-         0           21           21     0.00000000E+00 # A-Gluon-Gluon 
-         0           22           23     0.00000000E+00 # A-Photon-Z (not yet calculated by SPheno) 
+        55           22           22     0.13092162E-21 # A-Photon-Photon 
+        55           21           21     0.00000000E+00 # A-Gluon-Gluon 
+        55           22           23     0.00000000E+00 # A-Photon-Z (not yet calculated by SPheno) 
 Block SPhenoLowEnergy # low energy observables 
        1    2.43026246E-06  # T-parameter (1-loop BSM)
        2    7.68226772E-06  # S-parameter (1-loop BSM)
@@ -914,7 +915,7 @@ DECAY        25     3.65313134E-03   # hh_1
 DECAY        35     6.00488510E-03   # hh_2
 #    BR                NDA      ID1      ID2
      1.07975775E-04    2           21         21   # BR(hh_2 -> VG VG )
-     5.72451022E-01    2            0          0   # BR(hh_2 -> Ah_3 Ah_3 )
+     5.72451022E-01    2           55         55   # BR(hh_2 -> Ah_3 Ah_3 )
      5.21030257E-02    2           -6          6   # BR(hh_2 -> Fu_3^* Fu_3 )
      7.02740121E-02    2      -210001     210001   # BR(hh_2 -> Fx^* Fx )
      8.07611025E-02    2           25         25   # BR(hh_2 -> hh_1 hh_1 )
@@ -922,14 +923,14 @@ DECAY        35     6.00488510E-03   # hh_2
      7.19512325E-02    2           23         23   # BR(hh_2 -> VZ VZ )
 DECAY        45     1.07280342E+00   # hh_3
 #    BR                NDA      ID1      ID2
-     8.10669946E-01    2            0          0   # BR(hh_3 -> Ah_3 Ah_3 )
+     8.10669946E-01    2           55         55   # BR(hh_3 -> Ah_3 Ah_3 )
      6.30160615E-02    2      -210002     210002   # BR(hh_3 -> FeD_1^* FeD_1 )
      1.25882788E-01    2      -210001     210001   # BR(hh_3 -> Fx^* Fx )
      1.98181180E-04    2          -24         24   # BR(hh_3 -> VWm VWm^* )
 DECAY        31     1.63308320E+04   # VZp
 #    BR                NDA      ID1      ID2
-     6.49207356E-03    2           35          0   # BR(VZp -> hh_2 Ah_3 )
-     2.58245497E-02    2           45          0   # BR(VZp -> hh_3 Ah_3 )
+     6.49207356E-03    2           35         55   # BR(VZp -> hh_2 Ah_3 )
+     2.58245497E-02    2           45         55   # BR(VZp -> hh_3 Ah_3 )
      9.65336507E-03    2           -1          1   # BR(VZp -> Fd_1^* Fd_1 )
      9.65336507E-03    2           -3          3   # BR(VZp -> Fd_2^* Fd_2 )
      9.65336507E-03    2           -5          5   # BR(VZp -> Fd_3^* Fd_3 )
@@ -949,7 +950,7 @@ DECAY    210003     3.95168858E-03   # Fvv
      1.00000000E+00    2       210002         24   # BR(Fvv -> FeD_1 VWm^* )
 DECAY    210004     3.84219341E-03   # FeD_2
 #    BR                NDA      ID1      ID2
-     3.13944285E-03    2       210002          0   # BR(FeD_2 -> FeD_1 Ah_3 )
+     3.13944285E-03    2       210002         55   # BR(FeD_2 -> FeD_1 Ah_3 )
      5.19330042E-01    2       210002         25   # BR(FeD_2 -> FeD_1 hh_1 )
      4.77530515E-01    2       210002         23   # BR(FeD_2 -> FeD_1 VZ )
 DECAY    900037     4.04456661E-01   # Hm_2

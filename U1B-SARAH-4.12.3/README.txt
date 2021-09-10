@@ -9,5 +9,7 @@ ok. runing step by step
 5. Using Sheno-4.0.3
 6. Two neutrino masive
 7. Two scalars (S add phi) the gets VEV
+8. Notation for Calhep and micromegas. Working
+9. Warning... a new goldstone boson Ah[{3}]
 
 

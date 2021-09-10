@@ -12,10 +12,10 @@ Block SMINPUTS    # Standard Model inputs
 7 1.776690E+00    # m_tau(pole) 
 Block MINPAR      # Input parameters 
 1   -1.2700000E-01    # LambdahINPUT
-2   -7.2000000E-02    # Lambda21INPUT
-3   1.2000000E-03    # Lambda31INPUT
-4   -7.2000000E-03    # Lambda22INPUT
-5   1.0000000E-03    # Lambda32INPUT
+2   -7.2000000E-02    # Lambda2INPUT
+3   1.2000000E-03    # Lambda3INPUT
+4   -7.2000000E-03    # Lambda4INPUT
+5   1.0000000E-03    # Lambda5INPUT
 6   1.0000000E-01    # YA1INPUT
 7   1.0000000E-02    # YA2INPUT
 8   2.0000000E-01    # YB1INPUT
@@ -60,7 +60,7 @@ Block SPhenoInput   # SPheno specific input
  67 1               # effective Higgs mass calculation 
  75 0               # Write WHIZARD files 
  76 1               # Write HiggsBounds file   
- 77 0               # Output for MicrOmegas (running masses for light quarks; real mixing matrices)   
+ 77 1               # Output for MicrOmegas (running masses for light quarks; real mixing matrices)   
  78 0               # Output for MadGraph (writes also vanishing blocks)   
  79 1               # Write WCXF files (exchange format for Wilson coefficients) 
  86 0.              # Maximal width to be counted as invisible in Higgs decays; -1: only LSP 
@@ -75,45 +75,45 @@ Block DECAYOPTIONS   # Options to turn on/off specific decays
 2    1     # Calc 3-Body decays of Fu 
 3    1     # Calc 3-Body decays of Fe 
 4    1     # Calc 3-Body decays of Fd 
-Block L41IN    #  
-1 1   1.0000000E-02         # lam41(1,1)
-1 2   2.0000000E-02         # lam41(1,2)
-2 1   3.0000000E-02         # lam41(2,1)
-2 2   3.0000000E-02         # lam41(2,2)
-Block L42IN    #  
-1 1   1.1000000E-02         # lam42(1,1)
-1 2   2.0000000E-03         # lam42(1,2)
-2 1   3.1000000E-02         # lam42(2,1)
-2 2   4.0000000E-02         # lam42(2,2)
-Block MU1IN    #  
-1 1   2.0000000E+06         # mu1(1,1)
-1 2   0.000000E+00         # mu1(1,2)
-2 1   0.000000E+00         # mu1(2,1)
-2 2   2.0000000E+07         # mu1(2,2)
-Block MU2IN    #  
-1 1   2.0000000E+08         # mu2(1,1)
-1 2   0.000000E+00         # mu2(1,2)
-2 1   0.000000E+00         # mu2(2,1)
-2 2   2.0000000E+9         # mu2(2,2)
-Block YF1IN    #  
-1 1   1.0000000E-01         # YF1(1,1)
-1 2   2.0000000E-02         # YF1(1,2)
-2 1   1.0000000E-02         # YF1(2,1)
-2 2   2.0000000E-02         # YF1(2,2)
-Block YF2IN    #  
-1 1   1.0000000E-02         # YF2(1,1)
-1 2   2.0000000E-03         # YF2(1,2)
-2 1   1.0000000E-03         # YF2(2,1)
-2 2   2.0000000E-03         # YF2(2,2)
-Block YRDIN    #  
-1 1   1.0000000E-01         # YRD(1,1)
-1 2   2.0000000E-02         # YRD(1,2)
-1 3   3.0000000E-02         # YRD(1,3)
-2 1   1.0000000E-02         # YRD(2,1)
-2 2   2.0000000E-02         # YRD(2,2)
-2 3   3.0000000E-02         # YRD(2,3)
-Block YREIN    #  
-1 1   1.0000000E-01         # YRE(1,1)
-1 2   2.0000000E-02         # YRE(1,2)
-2 1   1.0000000E-03         # YRE(2,1)
-2 2   2.0000000E-02         # YRE(2,2)
+Block FIIN    #  
+1 1   1.0000000E-01         # Fi(1,1)
+1 2   2.0000000E-02         # Fi(1,2)
+2 1   1.0000000E-02         # Fi(2,1)
+2 2   2.0000000E-02         # Fi(2,2)
+Block FJIN    #  
+1 1   1.0000000E-02         # Fj(1,1)
+1 2   2.0000000E-03         # Fj(1,2)
+2 1   1.0000000E-03         # Fj(2,1)
+2 2   2.0000000E-03         # Fj(2,2)
+Block L6IN    #  
+1 1   1.0000000E-02         # lam6(1,1)
+1 2   2.0000000E-02         # lam6(1,2)
+2 1   3.0000000E-02         # lam6(2,1)
+2 2   3.0000000E-02         # lam6(2,2)
+Block L7IN    #  
+1 1   1.1000000E-02         # lam7(1,1)
+1 2   2.0000000E-03         # lam7(1,2)
+2 1   3.1000000E-02         # lam7(2,1)
+2 2   4.0000000E-02         # lam7(2,2)
+Block LDIN    #  
+1 1   1.0000000E-01         # LD(1,1)
+1 2   2.0000000E-02         # LD(1,2)
+1 3   3.0000000E-02         # LD(1,3)
+2 1   1.0000000E-02         # LD(2,1)
+2 2   2.0000000E-02         # LD(2,2)
+2 3   3.0000000E-02         # LD(2,3)
+Block LEIN    #  
+1 1   1.0000000E-01         # LE(1,1)
+1 2   2.0000000E-02         # LE(1,2)
+2 1   1.0000000E-03         # LE(2,1)
+2 2   2.0000000E-02         # LE(2,2)
+Block M1IN    #  
+1 1   2.0000000E+06         # m1(1,1)
+1 2   0.000000E+00         # m1(1,2)
+2 1   0.000000E+00         # m1(2,1)
+2 2   2.0000000E+07         # m1(2,2)
+Block M2IN    #  
+1 1   2.0000000E+08         # m2(1,1)
+1 2   0.000000E+00         # m2(1,2)
+2 1   0.000000E+00         # m2(2,1)
+2 2   2.0000000E+9         # m2(2,2)
