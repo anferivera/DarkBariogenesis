@@ -11,24 +11,25 @@ Block SMINPUTS    # Standard Model inputs
 6 1.735000E+02    # m_top(pole) 
 7 1.776690E+00    # m_tau(pole) 
 Block MINPAR      # Input parameters 
-1   -1.2700000E-01    # LambdahINPUT
+1   -1.3000000E-01    # LambdahINPUT
 2   -7.2000000E-02    # Lambda2INPUT
-3   1.2000000E-03    # Lambda3INPUT
+3   1.2000000E-04    # Lambda3INPUT
 4   -7.2000000E-03    # Lambda4INPUT
 5   1.0000000E-03    # Lambda5INPUT
-6   1.0000000E-01    # YA1INPUT
-7   1.0000000E-02    # YA2INPUT
-8   2.0000000E-01    # YB1INPUT
-9   2.0000000E-02    # YB2INPUT
-10   3.0000000E-01    # YC1INPUT
-11   3.0000000E-02    # YC2INPUT
-12   2.0000000E-02    # YRGINPUT
-13   1.2000000E-02    # YRHINPUT
-14   2.5000000E+03    # vXInput
-15   5.0000000E+03    # vX2Input
-16   5.0000000E-01    # g1pINPUT
-17   0.0000000E+00    # g1p1INPUT
-18   0.0000000E+00    # g11pINPUT
+6   4.0000000E+08    # mujINPUT
+7   1.0000000E-01    # YA1INPUT
+8   1.0000000E-02    # YA2INPUT
+9   2.0000000E-01    # YB1INPUT
+10   2.0000000E-02    # YB2INPUT
+11   3.0000000E-01    # YC1INPUT
+12   3.0000000E-02    # YC2INPUT
+13   2.0000000E-02    # YRGINPUT
+14   1.2000000E-02    # YRHINPUT
+15   2.5000000E+03    # vXInput
+16   0.000000E+00    # vX2Input
+17   5.0000000E-01    # g1pINPUT
+18   0.0000000E+00    # g1p1INPUT
+19   0.0000000E+00    # g11pINPUT
 Block SPhenoInput   # SPheno specific input 
   1 -1              # error level 
   2  0              # SPA conventions 
