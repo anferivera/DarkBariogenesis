@@ -1,120 +1,131 @@
-Block MODSEL      #  
-1 0               #  1/0: High/low scale input 
-2 1              # Boundary Condition  
-6 1               # Generation Mixing 
-12 173.5          # Renormalization scale 
-Block SMINPUTS    # Standard Model inputs 
-2 1.166370E-05    # G_F,Fermi constant 
-3 1.187000E-01    # alpha_s(MZ) SM MSbar 
-4 9.118870E+01    # Z-boson pole mass 
-5 4.180000E+00    # m_b(mb) SM MSbar 
-6 1.735000E+02    # m_top(pole) 
-7 1.776690E+00    # m_tau(pole) 
-Block MINPAR      # Input parameters 
-1   -1.3000000E-01    # LambdahINPUT
-2   -7.2000000E-02    # Lambda2INPUT
-3   1.2000000E-04    # Lambda3INPUT
-4   -7.2000000E-03    # Lambda4INPUT
-5   1.0000000E-03    # Lambda5INPUT
-6   4.0000000E+08    # mujINPUT
-7   1.0000000E-01    # YA1INPUT
-8   1.0000000E-02    # YA2INPUT
-9   2.0000000E-01    # YB1INPUT
-10   2.0000000E-02    # YB2INPUT
-11   3.0000000E-01    # YC1INPUT
-12   3.0000000E-02    # YC2INPUT
-13   2.0000000E-02    # YRGINPUT
-14   1.2000000E-02    # YRHINPUT
-15   2.5000000E+03    # vXInput
-16   0.000000E+00    # vX2Input
-17   5.0000000E-01    # g1pINPUT
-18   0.0000000E+00    # g1p1INPUT
-19   0.0000000E+00    # g11pINPUT
-Block SPhenoInput   # SPheno specific input 
-  1 -1              # error level 
-  2  0              # SPA conventions 
-  7  1              # Skip 2-loop Higgs corrections 
-  8  3              # Method used for two-loop calculation 
-  9  1              # Gaugeless limit used at two-loop 
- 10  0              # safe-mode used at two-loop 
- 11 1               # calculate branching ratios 
- 13 1               # 3-Body decays: none (0), fermion (1), scalar (2), both (3) 
- 14 0               # Run couplings to scale of decaying particle 
- 12 1.000E-04       # write only branching ratios larger than this value 
- 15 1.000E-30       # write only decay if width larger than this value 
- 31 -1              # fixed GUT scale (-1: dynamical GUT scale) 
- 32 0               # Strict unification 
- 34 1.000E-04       # Precision of mass calculation 
- 35 40              # Maximal number of iterations
- 36 5               # Minimal number of iterations before discarding points
- 37 1               # Set Yukawa scheme  
- 38 1               # 1- or 2-Loop RGEs 
- 50 0               # Majorana phases: use only positive masses (put 0 to use file with CalcHep/Micromegas!) 
- 51 0               # Write Output in CKM basis 
- 52 1               # Write spectrum in case of tachyonic states 
- 55 0               # Calculate loop corrected masses 
- 61 0               # Running SM parameters
- 57 1               # Calculate low energy constraints 
- 60 1               # Include possible, kinetic mixing 
- 65 1               # Solution tadpole equation 
- 66 1               # Two-Scale Matching 
- 67 1               # effective Higgs mass calculation 
- 75 0               # Write WHIZARD files 
- 76 1               # Write HiggsBounds file   
- 77 1               # Output for MicrOmegas (running masses for light quarks; real mixing matrices)   
- 78 0               # Output for MadGraph (writes also vanishing blocks)   
- 79 1               # Write WCXF files (exchange format for Wilson coefficients) 
- 86 0.              # Maximal width to be counted as invisible in Higgs decays; -1: only LSP 
-510 0.              # Write tree level values for tadpole solutions 
-515 0               # Write parameter values at GUT scale 
-520 1.              # Write effective Higgs couplings (HiggsBounds blocks): put 0 to use file with MadGraph! 
-521 1.              # Diphoton/Digluon widths including higher order 
-525 0.              # Write loop contributions to diphoton decay of Higgs 
-530 1.              # Write Blocks for Vevacious 
-Block DECAYOPTIONS   # Options to turn on/off specific decays 
-1    1     # Calc 3-Body decays of Fv 
-2    1     # Calc 3-Body decays of Fu 
-3    1     # Calc 3-Body decays of Fe 
-4    1     # Calc 3-Body decays of Fd 
-Block FIIN    #  
-1 1   1.0000000E-01         # Fi(1,1)
-1 2   2.0000000E-02         # Fi(1,2)
-2 1   1.0000000E-02         # Fi(2,1)
-2 2   2.0000000E-02         # Fi(2,2)
-Block FJIN    #  
-1 1   1.0000000E-02         # Fj(1,1)
-1 2   2.0000000E-03         # Fj(1,2)
-2 1   1.0000000E-03         # Fj(2,1)
-2 2   2.0000000E-03         # Fj(2,2)
-Block L6IN    #  
-1 1   1.0000000E-02         # lam6(1,1)
-1 2   2.0000000E-02         # lam6(1,2)
-2 1   3.0000000E-02         # lam6(2,1)
-2 2   3.0000000E-02         # lam6(2,2)
-Block L7IN    #  
-1 1   1.1000000E-02         # lam7(1,1)
-1 2   2.0000000E-03         # lam7(1,2)
-2 1   3.1000000E-02         # lam7(2,1)
-2 2   4.0000000E-02         # lam7(2,2)
-Block LDIN    #  
-1 1   1.0000000E-01         # LD(1,1)
-1 2   2.0000000E-02         # LD(1,2)
-1 3   3.0000000E-02         # LD(1,3)
-2 1   1.0000000E-02         # LD(2,1)
-2 2   2.0000000E-02         # LD(2,2)
-2 3   3.0000000E-02         # LD(2,3)
-Block LEIN    #  
-1 1   1.0000000E-01         # LE(1,1)
-1 2   2.0000000E-02         # LE(1,2)
-2 1   1.0000000E-03         # LE(2,1)
-2 2   2.0000000E-02         # LE(2,2)
-Block M1IN    #  
-1 1   2.0000000E+06         # m1(1,1)
-1 2   0.000000E+00         # m1(1,2)
-2 1   0.000000E+00         # m1(2,1)
-2 2   2.0000000E+07         # m1(2,2)
-Block M2IN    #  
-1 1   2.0000000E+08         # m2(1,1)
-1 2   0.000000E+00         # m2(1,2)
-2 1   0.000000E+00         # m2(2,1)
-2 2   2.0000000E+9         # m2(2,2)
+BLOCK MODSEL
+   1   0               #  1/0: High/low scale input
+   2   1              # Boundary Condition
+   6   1               # Generation Mixing
+   12   173.5          # Renormalization scale
+
+BLOCK SMINPUTS
+   2   1.166370E-05    # G_F,Fermi constant
+   3   1.187000E-01    # alpha_s(MZ) SM MSbar
+   4   9.118870E+01    # Z-boson pole mass
+   5   4.180000E+00    # m_b(mb) SM MSbar
+   6   1.735000E+02    # m_top(pole)
+   7   1.776690E+00    # m_tau(pole)
+
+BLOCK MINPAR
+   1   -1.3000000E-01    # LambdahINPUT
+   2   -7.230000E-02    # Lambda2INPUT
+   3   1.2000000E-04    # Lambda3INPUT
+   4   -7.2000000E-03    # Lambda4INPUT
+   5   1.0000000E-03    # Lambda5INPUT
+   6   4.0000000E+08    # mujINPUT
+   7   5.000000E-01    # YA1INPUT
+   8   1.0000000E-02    # YA2INPUT
+   9   2.0000000E-01    # YB1INPUT
+   10   2.0000000E-02    # YB2INPUT
+   11   1.000000E+00    # YC1INPUT
+   12   3.0000000E-02    # YC2INPUT
+   13   2.0000000E-02    # YRGINPUT
+   14   1.2000000E-02    # YRHINPUT
+   15   5.708488E+03    # vXInput
+   16   5.0000000E-01    # g1pINPUT
+   17   0.0000000E+00    # g1p1INPUT
+   18   0.0000000E+00    # g11pINPUT
+
+BLOCK SPHENOINPUT
+   1   -1              # error level
+   2   0              # SPA conventions
+   7   1              # Skip 2-loop Higgs corrections
+   8   3              # Method used for two-loop calculation
+   9   1              # Gaugeless limit used at two-loop
+   10   0              # safe-mode used at two-loop
+   11   1               # calculate branching ratios
+   13   1               # 3-Body decays: none (0), fermion (1), scalar (2), both (3)
+   14   0               # Run couplings to scale of decaying particle
+   12   1.000E-04       # write only branching ratios larger than this value
+   15   1.000E-30       # write only decay if width larger than this value
+   31   -1              # fixed GUT scale (-1: dynamical GUT scale)
+   32   0               # Strict unification
+   34   1.000E-04       # Precision of mass calculation
+   35   40              # Maximal number of iterations
+   36   5               # Minimal number of iterations before discarding points
+   37   1               # Set Yukawa scheme
+   38   1               # 1- or 2-Loop RGEs
+   50   0               # Majorana phases: use only positive masses (put 0 to use file with CalcHep/Micromegas!)
+   51   0               # Write Output in CKM basis
+   52   1               # Write spectrum in case of tachyonic states
+   55   0               # Calculate loop corrected masses
+   61   0               # Running SM parameters
+   57   1               # Calculate low energy constraints
+   60   1               # Include possible, kinetic mixing
+   65   1               # Solution tadpole equation
+   66   1               # Two-Scale Matching
+   67   1               # effective Higgs mass calculation
+   75   0               # Write WHIZARD files
+   76   1               # Write HiggsBounds file
+   77   1               # Output for MicrOmegas (running masses for light quarks; real mixing matrices)
+   78   0               # Output for MadGraph (writes also vanishing blocks)
+   79   1               # Write WCXF files (exchange format for Wilson coefficients)
+   86   0.              # Maximal width to be counted as invisible in Higgs decays; -1: only LSP
+   510   0.              # Write tree level values for tadpole solutions
+   515   0               # Write parameter values at GUT scale
+   520   1.              # Write effective Higgs couplings (HiggsBounds blocks): put 0 to use file with MadGraph!
+   521   1.              # Diphoton/Digluon widths including higher order
+   525   0.              # Write loop contributions to diphoton decay of Higgs
+   530   1.              # Write Blocks for Vevacious
+
+BLOCK DECAYOPTIONS
+   1   1     # Calc 3-Body decays of Fv
+   2   1     # Calc 3-Body decays of Fu
+   3   1     # Calc 3-Body decays of Fe
+   4   1     # Calc 3-Body decays of Fd
+
+BLOCK FIIN
+   1   1   1.120000E-01    # Fi(1,1)
+   1   2      2.0000000E-02         # Fi(1,2)
+   2   1      1.0000000E-02         # Fi(2,1)
+   2   2      2.0000000E-02         # Fi(2,2)
+
+BLOCK FJIN
+   1   1      1.0000000E-02         # Fj(1,1)
+   1   2      2.0000000E-03         # Fj(1,2)
+   2   1      1.0000000E-03         # Fj(2,1)
+   2   2      2.0000000E-03         # Fj(2,2)
+
+BLOCK L6IN
+   1   1      1.0000000E-02         # lam6(1,1)
+   1   2      2.0000000E-02         # lam6(1,2)
+   2   1      3.0000000E-02         # lam6(2,1)
+   2   2      3.0000000E-02         # lam6(2,2)
+
+BLOCK L7IN
+   1   1      1.1000000E-02         # lam7(1,1)
+   1   2      2.0000000E-03         # lam7(1,2)
+   2   1      3.1000000E-02         # lam7(2,1)
+   2   2      4.0000000E-02         # lam7(2,2)
+
+BLOCK LDIN
+   1   1      1.0000000E-01         # LD(1,1)
+   1   2      2.0000000E-02         # LD(1,2)
+   1   3      3.0000000E-02         # LD(1,3)
+   2   1      1.0000000E-02         # LD(2,1)
+   2   2      2.0000000E-02         # LD(2,2)
+   2   3      3.0000000E-02         # LD(2,3)
+
+BLOCK LEIN
+   1   1      1.0000000E-01         # LE(1,1)
+   1   2      2.0000000E-02         # LE(1,2)
+   2   1      1.0000000E-03         # LE(2,1)
+   2   2      2.0000000E-02         # LE(2,2)
+
+BLOCK M1IN
+   1   1      2.0000000E+06         # m1(1,1)
+   1   2      0.000000E+00         # m1(1,2)
+   2   1      0.000000E+00         # m1(2,1)
+   2   2      2.0000000E+07         # m1(2,2)
+
+BLOCK M2IN
+   1   1      2.0000000E+08         # m2(1,1)
+   1   2      0.000000E+00         # m2(1,2)
+   2   1      0.000000E+00         # m2(2,1)
+   2   2      2.0000000E+9         # m2(2,2)

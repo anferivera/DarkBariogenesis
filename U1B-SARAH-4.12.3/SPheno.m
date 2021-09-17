@@ -6,23 +6,23 @@ MINPAR={{1, LambdahINPUT},
         {3, Lambda3INPUT},
         {4, Lambda4INPUT},
         {5, Lambda5INPUT},
-        {6, YA1INPUT},
-        {7, YA2INPUT},
-        {8, YB1INPUT},
-        {9, YB2INPUT},
-        {10, YC1INPUT},
-        {11, YC2INPUT},
-        {12, YRGINPUT},
-        {13, YRHINPUT},
-        {14, vXInput},
-        {15, vX2Input},
+        {6, mujINPUT},
+        {7, YA1INPUT},
+        {8, YA2INPUT},
+        {9, YB1INPUT},
+        {10, YB2INPUT},
+        {11, YC1INPUT},
+        {12, YC2INPUT},
+        {13, YRGINPUT},
+        {14, YRHINPUT},
+        {15, vXInput},
         {16, g1pINPUT},
         {17, g1p1INPUT},
         {18, g11pINPUT}               
 
 };
 
-ParametersToSolveTadpoles = {muh,mui,muj};
+ParametersToSolveTadpoles = {muh,mui};
 
 DEFINITION[MatchingConditions]= {
  {Ye, YeSM},
@@ -45,6 +45,7 @@ BoundaryLowScaleInput={
  {L3, Lambda3INPUT},
  {L4, Lambda4INPUT},
  {L5, Lambda5INPUT},
+ {muj, mujINPUT},
  
  {YA1, YA1INPUT},
  {YA2, YA2INPUT},
@@ -55,7 +56,6 @@ BoundaryLowScaleInput={
  {YRG, YRGINPUT},
  {YRH, YRHINPUT},
  {vX, vXInput},
- {vX2, vX2Input},
  
  {LD, LHInput[LD]},
  {LE, LHInput[LE]},
@@ -69,19 +69,17 @@ BoundaryLowScaleInput={
 
 AddTreeLevelUnitarityLimits=True;
 
-ListDecayParticles = {Fu,Fe,Fd,Fv,hh,VZp,Fx,Fvv,FeD,Hm,Ah};
-ListDecayParticles3B = {{Fv,"Fv.f90"},{Fu,"Fu.f90"},{Fe,"Fe.f90"},{Fd,"Fd.f90"}};
+ListDecayParticles = {Fu,Fe,Fd,hh,VZp,Fx,Fvv,FeD,Hm,ss};
+ListDecayParticles3B = {{Fu,"Fu.f90"},{Fe,"Fe.f90"},{Fd,"Fd.f90"}};
 
 
 DefaultInputValues ={ LambdahINPUT -> -0.127, Lambda2INPUT -> -7.2*10^-2, Lambda3INPUT -> 1.2*10^-3, Lambda4INPUT -> -7.2*10^-3,
     
-    Lambda5INPUT -> 1.0*10^-3, g1pINPUT->0.5, g11pINPUT -> 0.0, g1p1INPUT -> 0.0, vXInput->2500, vX2Input->5000, 
+    Lambda5INPUT -> 1.0*10^-3, g1pINPUT->0.5, g11pINPUT -> 0.0, g1p1INPUT -> 0.0, vXInput->2500, 
     
     YA1INPUT -> 0.1, YA2INPUT -> 0.01, YB1INPUT -> 0.2, YB2INPUT -> 0.02, YC1INPUT -> 0.3, YC2INPUT -> 0.03, 
-    
-    Lambda22INPUT -> 0.003, Lambda23INPUT -> 0.004, 
-    
-    mu1INPUT -> 2000000., mu2INPUT -> 3.0*10^8, YRGINPUT -> 0.02, YRHINPUT -> 0.012, 
+        
+    mujINPUT -> 4.0*10^8, mu1INPUT -> 2000000., mu2INPUT -> 3.0*10^8, YRGINPUT -> 0.02, YRHINPUT -> 0.012, 
     
     L6[1,1] -> 1.0*10^-2, L6[1,2] -> 2.0*10^-2, L6[2,1] -> 3.0*10^-2, L6[2,2] -> 3.0*10^-2, 
     

@@ -3,7 +3,7 @@ Off[General::spell]
 Model`Name = "U1B";
 Model`NameLaTeX =" U(1)B extension for Bariogenesis";
 Model`Authors = "Andres Rivera. Base in SM by F.Staub";
-Model`Date = "2021-08-09";
+Model`Date = "2021-09-09";
 
 (* 2014-11-06: Changed sign in Lagrangian *)
 (* 2020-22-07 Introduccing new scalar bi2 for Bariogenesis *)
@@ -13,7 +13,7 @@ Model`Date = "2021-08-09";
 (* 2021-08-09 two scalars bi bj*)
 
 (*-------------------------------------------*)
-(*   Particle Content*)
+(*   Particle Content  *)
 (*-------------------------------------------*)
 
 (* Global Symmetries *)
@@ -46,7 +46,7 @@ FermionFields[[12]] = {lpp, 1,conj[{-epp,vpp}],  1/2, 2,  1,    6,  1}; (*thirth
 
 ScalarFields[[1]] = {H,  1, {Hp, H0},           1/2, 2,  1,  0,  1};
 ScalarFields[[2]] = {bi,  1, BiD,                 0, 1,  1,  5,  1};
-ScalarFields[[3]] = {bj,  1, BjD,                 0, 1,  1,  5,  1};
+ScalarFields[[3]] = {bj,  1, ss,                 0, 1,  1,  5,  1};
 ScalarFields[[4]] = {S1,  2, s1,                 -1, 1,  1, -1,  1};
 ScalarFields[[5]] = {S2,  2, s2,                 -1, 1,  1,  4,  1};
 
@@ -99,14 +99,14 @@ DEFINITION[EWSB][GaugeSector] =
 
 DEFINITION[EWSB][VEVs]= 
 {    {H0, {vH, 1/Sqrt[2]}, {sigmaH, \[ImaginaryI]/Sqrt[2]},{phiH, 1/Sqrt[2]}},
-     {BiD,{vX, 1/Sqrt[2]}, {sigmaB, \[ImaginaryI]/Sqrt[2]},{phiB, 1/Sqrt[2]}},
-     {BjD,{vX2, 1/Sqrt[2]}, {sigmaBj, \[ImaginaryI]/Sqrt[2]},{phiBj, 1/Sqrt[2]}}
+     {BiD,{vX, 1/Sqrt[2]}, {sigmaB, \[ImaginaryI]/Sqrt[2]},{phiB, 1/Sqrt[2]}}
 };
  
 DEFINITION[EWSB][MatterSector]=   
     {
-     {{phiH,phiB,phiBj},{hh,ZH}},
-     {{sigmaH,sigmaB,sigmaBj},{Ah,ZA}},
+     {{phiH,phiB},{hh,ZH}},
+     {{sigmaH,sigmaB},{Ah,ZA}},
+     
      {{conj[Hp],s1,s2},{Hm,ZP}},
 
      {{{dL}, {conj[dR]}}, {{DL,Vd}, {DR,Ud}}},
@@ -129,10 +129,6 @@ DEFINITION[EWSB][DiracSpinors]={
  
  Fx ->{  x3L,x4R}, 
  Fvv ->{  vp, vpp},
-
-(* Fed ->{  ep, x5R}, (*second electron*)
- Fes ->{  epp, x6L},(*thirth electron*) *)
-
  FeD ->{  ELD, conj[ERD]} (*New two electrons*)
  
 };

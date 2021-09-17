@@ -11,9 +11,9 @@ Block SMINPUTS    # Standard Model inputs
 6 1.735000E+02    # m_top(pole) 
 7 1.776690E+00    # m_tau(pole) 
 Block MINPAR      # Input parameters 
-1   -1.3000000E-01    # LambdahINPUT
+1   -1.2700000E-01    # LambdahINPUT
 2   -7.2000000E-02    # Lambda2INPUT
-3   1.2000000E-04    # Lambda3INPUT
+3   1.2000000E-03    # Lambda3INPUT
 4   -7.2000000E-03    # Lambda4INPUT
 5   1.0000000E-03    # Lambda5INPUT
 6   4.0000000E+08    # mujINPUT
@@ -26,10 +26,9 @@ Block MINPAR      # Input parameters
 13   2.0000000E-02    # YRGINPUT
 14   1.2000000E-02    # YRHINPUT
 15   2.5000000E+03    # vXInput
-16   0.000000E+00    # vX2Input
-17   5.0000000E-01    # g1pINPUT
-18   0.0000000E+00    # g1p1INPUT
-19   0.0000000E+00    # g11pINPUT
+16   5.0000000E-01    # g1pINPUT
+17   0.0000000E+00    # g1p1INPUT
+18   0.0000000E+00    # g11pINPUT
 Block SPhenoInput   # SPheno specific input 
   1 -1              # error level 
   2  0              # SPA conventions 
@@ -60,7 +59,7 @@ Block SPhenoInput   # SPheno specific input
  66 1               # Two-Scale Matching 
  67 1               # effective Higgs mass calculation 
  75 0               # Write WHIZARD files 
- 76 1               # Write HiggsBounds file   
+ 76 0               # Write HiggsBounds file   
  77 1               # Output for MicrOmegas (running masses for light quarks; real mixing matrices)   
  78 0               # Output for MadGraph (writes also vanishing blocks)   
  79 1               # Write WCXF files (exchange format for Wilson coefficients) 
@@ -72,10 +71,9 @@ Block SPhenoInput   # SPheno specific input
 525 0.              # Write loop contributions to diphoton decay of Higgs 
 530 1.              # Write Blocks for Vevacious 
 Block DECAYOPTIONS   # Options to turn on/off specific decays 
-1    1     # Calc 3-Body decays of Fv 
-2    1     # Calc 3-Body decays of Fu 
-3    1     # Calc 3-Body decays of Fe 
-4    1     # Calc 3-Body decays of Fd 
+1    1     # Calc 3-Body decays of Fu 
+2    1     # Calc 3-Body decays of Fe 
+3    1     # Calc 3-Body decays of Fd 
 Block FIIN    #  
 1 1   1.0000000E-01         # Fi(1,1)
 1 2   2.0000000E-02         # Fi(1,2)

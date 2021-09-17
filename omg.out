@@ -1,0 +1,14 @@
+1 13.813136 # relic density 
+100 0.434810 # ~Chi0 ~chi0 -> eD1 ED1
+101 0.114419 # ~Chi0 ~chi0 -> nu2 nu3
+102 0.114419 # ~Chi0 ~chi0 -> nu4 nu5
+103 0.057210 # ~Chi0 ~chi0 -> nu2 nu2
+104 0.057210 # ~Chi0 ~chi0 -> nu3 nu3
+105 0.057210 # ~Chi0 ~chi0 -> nu4 nu4
+106 0.057210 # ~Chi0 ~chi0 -> nu5 nu5
+107 0.016951 # ~Chi0 ~chi0 -> u2 U2
+108 0.016951 # ~Chi0 ~chi0 -> d2 D2
+109 0.016951 # ~Chi0 ~chi0 -> u1 U1
+110 0.016951 # ~Chi0 ~chi0 -> d1 D1
+111 0.016951 # ~Chi0 ~chi0 -> d3 D3
+112 0.016951 # ~Chi0 ~chi0 -> u3 U3
