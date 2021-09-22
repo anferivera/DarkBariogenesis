@@ -108,15 +108,15 @@ def buildSLHAinFile():
 
     #Block L6IN    #  
     LHA.blocks['L6IN'].entries[1,1]='   1.0000000E-02         # lam6(1,1)'
-    LHA.blocks['L6IN'].entries[1,2]='   2.0000000E-02         # lam6(1,2)'
-    LHA.blocks['L6IN'].entries[2,1]='   3.0000000E-02         # lam6(2,1)'
-    LHA.blocks['L6IN'].entries[2,2]='   3.0000000E-02         # lam6(2,2)'
+    LHA.blocks['L6IN'].entries[1,2]='   0.0000000E-02         # lam6(1,2)'
+    LHA.blocks['L6IN'].entries[2,1]='   0.0000000E-02         # lam6(2,1)'
+    LHA.blocks['L6IN'].entries[2,2]='   4.0000000E-02         # lam6(2,2)'
 
     #Block L7IN    #  
     LHA.blocks['L7IN'].entries[1,1]='   1.1000000E-02         # lam7(1,1)'
-    LHA.blocks['L7IN'].entries[1,2]='   2.0000000E-03         # lam7(1,2)'
-    LHA.blocks['L7IN'].entries[2,1]='   3.1000000E-02         # lam7(2,1)'
-    LHA.blocks['L7IN'].entries[2,2]='   4.0000000E-02         # lam7(2,2)'
+    LHA.blocks['L7IN'].entries[1,2]='   0.0000000E-03         # lam7(1,2)'
+    LHA.blocks['L7IN'].entries[2,1]='   0.1000000E-02         # lam7(2,1)'
+    LHA.blocks['L7IN'].entries[2,2]='   5.0000000E-02         # lam7(2,2)'
 
     #$Block LDIN    #  
     LHA.blocks['LDIN'].entries[1,1]='   1.0000000E-01         # LD(1,1)'
