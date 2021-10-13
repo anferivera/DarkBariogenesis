@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     25471,        758]
+NotebookDataLength[     25475,        758]
 NotebookOptionsPosition[     23424,        682]
-NotebookOutlinePosition[     23789,        698]
-CellTagsIndexPosition[     23746,        695]
+NotebookOutlinePosition[     23787,        698]
+CellTagsIndexPosition[     23744,        695]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -681,8 +681,8 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{1920, 1015},
-WindowMargins->{{0, Automatic}, {7, Automatic}},
-Magnification:>1.25 Inherited,
+WindowMargins->{{0, Automatic}, {4, Automatic}},
+Magnification:>2. Inherited,
 FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -698,65 +698,65 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 178, 2, 116, "Title"],
+Cell[580, 22, 178, 2, 185, "Title"],
 Cell[CellGroupData[{
-Cell[783, 28, 166, 2, 44, "Subsubsection"],
+Cell[783, 28, 166, 2, 70, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[974, 34, 1469, 39, 264, "Input"],
-Cell[2446, 75, 248, 6, 38, "Output"],
-Cell[2697, 83, 248, 6, 38, "Output"],
-Cell[2948, 91, 248, 6, 38, "Output"],
-Cell[3199, 99, 247, 6, 38, "Output"],
-Cell[3449, 107, 248, 6, 38, "Output"],
-Cell[3700, 115, 248, 6, 38, "Output"]
+Cell[974, 34, 1469, 39, 423, "Input"],
+Cell[2446, 75, 248, 6, 62, "Output"],
+Cell[2697, 83, 248, 6, 62, "Output"],
+Cell[2948, 91, 248, 6, 62, "Output"],
+Cell[3199, 99, 247, 6, 62, "Output"],
+Cell[3449, 107, 248, 6, 62, "Output"],
+Cell[3700, 115, 248, 6, 62, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3985, 126, 633, 18, 66, "Input"],
-Cell[4621, 146, 891, 22, 106, "Output"]
+Cell[3985, 126, 633, 18, 106, "Input"],
+Cell[4621, 146, 891, 22, 142, "Output"]
 }, Open  ]],
-Cell[5527, 171, 96, 1, 40, "Text"],
+Cell[5527, 171, 96, 1, 64, "Text"],
 Cell[CellGroupData[{
-Cell[5648, 176, 1838, 53, 67, "Input"],
-Cell[7489, 231, 1063, 21, 77, "Output"]
+Cell[5648, 176, 1838, 53, 108, "Input"],
+Cell[7489, 231, 1063, 21, 124, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8601, 258, 228, 3, 44, "Subsubsection"],
+Cell[8601, 258, 228, 3, 70, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[8854, 265, 2189, 50, 245, "Input"],
-Cell[11046, 317, 2351, 61, 127, "Output"]
+Cell[8854, 265, 2189, 50, 393, "Input"],
+Cell[11046, 317, 2351, 61, 204, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13434, 383, 303, 7, 40, "Input"],
-Cell[13740, 392, 239, 5, 40, "Output"]
+Cell[13434, 383, 303, 7, 65, "Input"],
+Cell[13740, 392, 239, 5, 65, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14016, 402, 434, 10, 40, "Input"],
-Cell[14453, 414, 263, 4, 38, "Output"]
+Cell[14016, 402, 434, 10, 65, "Input"],
+Cell[14453, 414, 263, 4, 60, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14753, 423, 488, 11, 40, "Input"],
-Cell[15244, 436, 293, 5, 38, "Output"]
+Cell[14753, 423, 488, 11, 62, "Input"],
+Cell[15244, 436, 293, 5, 60, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15574, 446, 208, 4, 40, "Input"],
-Cell[15785, 452, 2116, 59, 127, "Output"]
+Cell[15574, 446, 208, 4, 62, "Input"],
+Cell[15785, 452, 2116, 59, 178, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17950, 517, 101, 1, 44, "Subsubsection"],
-Cell[18054, 520, 118, 1, 40, "Text"],
+Cell[17950, 517, 101, 1, 70, "Subsubsection"],
+Cell[18054, 520, 118, 1, 64, "Text"],
 Cell[CellGroupData[{
-Cell[18197, 525, 554, 14, 40, "Input"],
-Cell[18754, 541, 487, 11, 73, "Output"]
+Cell[18197, 525, 554, 14, 62, "Input"],
+Cell[18754, 541, 487, 11, 112, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19278, 557, 846, 22, 40, "Input"],
-Cell[20127, 581, 1300, 36, 86, "Output"]
+Cell[19278, 557, 846, 22, 62, "Input"],
+Cell[20127, 581, 1300, 36, 131, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[21464, 622, 749, 21, 40, "Input"],
-Cell[22216, 645, 1168, 32, 86, "Output"]
+Cell[21464, 622, 749, 21, 62, "Input"],
+Cell[22216, 645, 1168, 32, 131, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
