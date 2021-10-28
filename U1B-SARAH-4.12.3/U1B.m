@@ -3,7 +3,7 @@ Off[General::spell]
 Model`Name = "U1B";
 Model`NameLaTeX =" U(1)B extension for Bariogenesis";
 Model`Authors = "Andres Rivera. Base in SM by F.Staub";
-Model`Date = "2021-09-09";
+Model`Date = "2021-10-24";
 
 (* 2014-11-06: Changed sign in Lagrangian *)
 (* 2020-22-07 Introduccing new scalar bi2 for Bariogenesis *)
