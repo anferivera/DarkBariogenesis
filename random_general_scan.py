@@ -61,15 +61,15 @@ for i in range(0,Num):
     L721 = np.exp(np.random.uniform(np.log(1.*10**(-4)),np.log(10**(-1)))) 
     L722 = np.exp(np.random.uniform(np.log(1.*10**(-4)),np.log(10**(-1)))) 
     
-    M111 = np.exp(np.random.uniform(np.log(1.*10**(6)),np.log(10**(8)))) #m1 conj[S1].S1
+    M111 = np.exp(np.random.uniform(np.log(1.*10**(6)),np.log(10**(10)))) #m1 conj[S1].S1
     M112 = 0. 
     M121 = 0. 
-    M122 = np.exp(np.random.uniform(np.log(1.*10**(6)),np.log(10**(8)))) 
+    M122 = np.exp(np.random.uniform(np.log(1.*10**(6)),np.log(10**(10)))) 
     
-    M211 = np.exp(np.random.uniform(np.log(1.*10**(6)),np.log(10**(8)))) #m2 conj[S2].S2
+    M211 = np.exp(np.random.uniform(np.log(1.*10**(6)),np.log(10**(10)))) #m2 conj[S2].S2
     M212 = 0. 
     M221 = 0. 
-    M222 = np.exp(np.random.uniform(np.log(1.*10**(6)),np.log(10**(8)))) 
+    M222 = np.exp(np.random.uniform(np.log(1.*10**(6)),np.log(10**(10)))) 
     
     #Modify one parameter
     xdict.blocks['MINPAR'].entries[2]='%.6E    # Lambda2INPUT'%Lambda2
@@ -320,7 +320,10 @@ for i in range(0,Num):
     mnu2 = np.abs(eval(so.split('# Fe_3')[1].split()[5]))
     mnu3 = np.abs(eval(so.split('# Fe_3')[1].split()[13]))
     
-    if mnu2 < 8.0e-12: #bad re-construction
+    if np.abs(np.abs(mnu2)-mv2)*100/mv2 > 10.: #bad re-construction
+        continue
+    
+    if np.abs(np.abs(mnu3)-mv3)*100/mv3 > 10.: #bad re-construction
         continue
         
     if mh1 == 1.0: #bad higgs mass
