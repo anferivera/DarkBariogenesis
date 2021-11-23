@@ -38,9 +38,13 @@ for i in range(0,Num):
     YC2 = np.exp(np.random.uniform(np.log(1.*10**(-4)),np.log(10**(0)))) #YC2 conj[bj].lp.lpp 
     YRG = np.exp(np.random.uniform(np.log(1.*10**(-4)),np.log(10**(0)))) #YRG conj[H].x5.lp 
     YRH = np.exp(np.random.uniform(np.log(1.*10**(-4)),np.log(10**(0)))) #YRH H.x6.lpp
-    vx = np.random.uniform(100,12000) # VEV of Phi
+    vx = np.random.uniform(100,20000) # VEV of Phi
     g1p = np.exp(np.random.uniform(np.log(1.*10**(-6)),np.log(10**(0)))) #U1B coupling
-    
+
+    #Cut
+    if (5.*g1p*vx) > 5.E3:
+        continue
+        
     Fi11 = np.exp(np.random.uniform(np.log(1.*10**(-4)),np.log(10**(0)))) #Fi conj[S1].S2.conj[bi]
     Fi12 = 0.0
     Fi21 = 0.0
@@ -124,17 +128,12 @@ for i in range(0,Num):
     if (5.*g1p*vx) > 91.1887:
         spheno = subprocess.getoutput('~/Work/SPheno-4.0.3/bin/SPhenoU1B LesHouches.in.U1B_low')    
         so = subprocess.getoutput('cat SPheno.spc.U1B')
-        #print("Mayor")
     
     else:
         spheno = subprocess.getoutput('~/Work/SPheno-4.0.3/bin/SPhenoU1Blight LesHouches.in.U1B_low')    
         so = subprocess.getoutput('cat SPheno.spc.U1Blight')
-        #print("Menor")
     
     MZp = eval(so.split('# VWm')[1].split()[1])
-    
-    if MZp > 3.E3:
-        continue
 
     ZP22 = eval(so.split('# ZP(2,1)')[1].split()[2])
     ZP23 = eval(so.split('# ZP(2,1)')[1].split()[7])
@@ -276,7 +275,6 @@ for i in range(0,Num):
     if (5.*g1p*vx) > 91.1887:
         spheno = subprocess.getoutput('~/Work/SPheno-4.0.3/bin/SPhenoU1B LesHouches.in.U1B_low')    
         so = subprocess.getoutput('cat SPheno.spc.U1B')
-        #print("Mayor")
     
     else:
         spheno = subprocess.getoutput('~/Work/SPheno-4.0.3/bin/SPhenoU1Blight LesHouches.in.U1B_low')   
@@ -284,7 +282,6 @@ for i in range(0,Num):
         subprocess.getoutput('cp SPheno.spc.U1Blight SPheno.spc.U1B')
         
         so = subprocess.getoutput('cat SPheno.spc.U1Blight')
-        #print("Menor")
 
     #take spheno output
     ZP22 = eval(so.split('# ZP(2,1)')[1].split()[2])
