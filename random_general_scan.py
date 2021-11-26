@@ -130,6 +130,9 @@ for i in range(0,Num):
         so = subprocess.getoutput('cat SPheno.spc.U1B')
     
     else:
+        if np.abs( (5.*g1p*vx) - (1./np.sqrt(2)*vx*YA1) ) > 500:
+            continue
+    
         spheno = subprocess.getoutput('~/Work/SPheno-4.0.3/bin/SPhenoU1Blight LesHouches.in.U1B_low')    
         so = subprocess.getoutput('cat SPheno.spc.U1Blight')
     
