@@ -31,6 +31,7 @@ def my_heaviside(x1,x2):
 
 def mycosh(x):
     ### Our own definition of coh(x) to avoid evaluating np.cosh(x) at |x|>150 since this will have precission issues 
+    ###
         
     if abs(x)< 150.0:
         return np.cosh(x)
@@ -40,10 +41,11 @@ def mycosh(x):
 def Scpv(xpm, vpzsq, pzovom, th, lam, so, Lw, mo, Tn, vw, z):
     # This is the definition of the CP-violation source from Cline's work
     
-    mchi1=abs(so*(1.0 + np.tanh(z/Lw))/2.0) #error 1/2
+    mchi1=abs(so*(1.0 + np.tanh(z/Lw))/2.0) #error 1/2: corrected
     mchisq=((mo+lam*np.cos(th)*mchi1))**2.0 + (lam*np.sin(th)*mchi1)**2.0 #revisar
     
-    scpv = -(2.0*vw*np.pi/(lam*Tn**3.0)*pzovom)*(mo*so*(-2.0+mycosh(2.0*z/Lw))*np.sin(th)/(Lw**3*mycosh(z/Lw)**4.0))
+    #vz = p/np.sqrt(p**2.0 + mchisq)
+    scpv = -(2.0*vw*np.pi/(lam*Tn**2.0)*pzovom)*(mo*so*(-2.0+mycosh(2.0*z/Lw))*np.sin(th)/(Lw**3*mycosh(z/Lw)**4.0))
     
     # From Andres' code, I took the idea of renormalizing this function 
     if np.isnan(scpv):
@@ -67,7 +69,7 @@ def DelnBeq(th, lam, so, Lw, mo, Tn, vw, Mzp, qS, gp, z):
     vw2=vw**2
     xpm=mo/Tn 
     vpzsq= (3.0*xpm+2.0)/(xpm**2.0+3.0*xpm+2.0)
-    pzovom=((1.0-xpm)*np.exp(-xpm)+xpm**2.0*scipy.special.erf(xpm))/(4.0*(xpm*Tn)**2.0*scipy.special.kn(2, xpm))
+    pzovom=((1.0-xpm)*np.exp(-xpm)+xpm**2.0*scipy.special.erf(xpm))/(4.0*(mo)**2.0*scipy.special.kn(2, xpm))
     
     inttemp = lambda z1: xiL(vw2, xpm, vpzsq,  pzovom, th, lam, so, Lw, mo, Tn, vw, Mzp, z1)*np.exp(-Mzp*abs(z-z1))
     return gp*qS*Tn**2/3.0*gp/(Mzp)*(1.0/3.0*qS*Tn**3)*scipy.integrate.quad(inttemp,-30.,30.,limit=40)[0]
@@ -80,6 +82,7 @@ del[yd['index']]
 
 #fixed parameters
 qS=5.0 #charge of Phi
+gweak = 0.774371 #weak coupling
 
 t1= time.time()
 
@@ -88,13 +91,14 @@ Num = int(sys.argv[1])
 
 yt=[]
 
-for i in range(0,Num):
+for i in range(0,1):
 
     Mzpt=yd['MZp'][i]
-    gpt=yd['g1p'][i]
-    mot=yd['mchi'][i]
+    gpt= yd['g1p'][i]
+    mot= yd['mchi'][i]
     
-    for j in range(0,10):### modified
+    for j in range(0,1):
+        #print(j)
         ## random parameters
         tht = np.random.uniform(-np.pi/2.,np.pi/2.)
         lamt= np.exp(np.random.uniform(np.log(1.*10**(-2)),np.log(10**(0))))
@@ -102,20 +106,22 @@ for i in range(0,Num):
         Tnt= np.random.uniform(100.,500.)
         Lwt= np.random.uniform(1./Tnt,10./Tnt)
         vwt= np.random.uniform(0.05,0.5)
-
+        
         xt=[]
         xt2=[]
         for zt in np.arange(0,20.,.36): 
             ### This for loop creates an interpolation of \Delta n_{B eq} vs z. To be used in the numerical integral that
+            ### follows
 
             delnbt=DelnBeq(tht, lamt, sot, Lwt, mot, Tnt, vwt, Mzpt, qS, gpt,zt)
             #print(zt, ' ',delnbt)
             xt.append(delnbt)
             xt2.append(zt)
 
+        Gamma0=120.0*(gweak**2.0/(4.0*np.pi))**5.0*Tnt
         dnbfcn = lambda z: np.interp(z,xt2,xt)
-        inttemp = lambda z: dnbfcn(z)*np.exp(-z*120.0*(gpt**2.0/(4.0*np.pi))**5.0*Tnt/vwt)
-        delnbt= scipy.integrate.quad(inttemp,0.0,20.0,limit=40)[0]*120.0*(gpt**2.0/(4.0*np.pi))**5.0*Tnt/vwt
+        inttemp = lambda z: dnbfcn(z)*np.exp(-z*Gamma0/vwt)
+        delnbt= scipy.integrate.quad(inttemp,0.0,20.0,limit=40)[0]*Gamma0/vwt
 
         #entdens=(2.0*math.pi**2.0)*100.0*(125.0)**3.0/45.0 ### This is s ~ Tc^3 Tc =125.0
         #print('MZ\'=',Mzpt, ' gp=',gpt,delnbt/entdens)
