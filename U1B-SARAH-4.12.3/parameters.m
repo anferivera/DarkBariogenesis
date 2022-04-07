@@ -5,15 +5,19 @@ ParameterDefinitions = {
 {g11p,        {Description -> "Mixed Gauge Coupling 2"}},
 {g1p1,        {Description -> "Mixed Gauge Coupling 1"}},
 
-{g1p,       {   Description -> "B-L-Coupling"}},
+(*{g1p,       {   Description -> "B-L-Coupling"}},*)
 
-(*{g1p,        {Description -> "chargeB-Coupling", 
-		 LaTeX -> "g_{X}",
-             Dependence -> None, 
-             LesHouches -> {gauge,4},
-             OutputName -> gX }},
+{g1p,{ 
+     Dependence -> None, 
+     DependenceNum -> None, 
+     DependenceOptional -> None, 
+     DependenceSPheno -> None, 
+     Real -> True, 
+     LesHouches -> {gauge, 12}, 
+     LaTeX -> "g_{1p}", 
+     OutputName -> g1p}},
 
-{MZp,       {   Description -> "Z' mass"}},*)
+{MZp,       {   Description -> "Z' mass"}},
 
 
 {g2,        { Description -> "Left-Coupling"}},

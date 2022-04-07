@@ -8,8 +8,9 @@ ok. runing step by step
 4. Using SARAH-4.12.3
 5. Using Sheno-4.0.3
 6. Two neutrino masive
-7. Two scalars (S add phi) the gets VEV
-8. Notation for Calhep and micromegas. Working
-9. Warning... a new goldstone boson Ah[{3}]
+7. One new scalars (bi=Phi) the gets VEV
+8. Notation for Calhep and micromegas_5.0.4. Working
+9. One Scalar (bj=S) that does no have VEV (inert)
+
 
 
