@@ -79,7 +79,8 @@ ParticleDefinitions[GaugeES] = {
     {gZ,   { Description -> "Z-Boson Ghost" }},
     {gG,   { Description -> "Gluon Ghost" }},          
     {VZp,  { Description -> "Z'-Boson",
-      			 Goldstone -> Ah[{2}]}},  
+      			 Goldstone -> Ah[{2}],
+					Width ->Automatic }},  
     {gZp,  { Description -> "Z'-Ghost" }}, 
                  
     {Fd,   { Description -> "Down-Quarks"}},   
